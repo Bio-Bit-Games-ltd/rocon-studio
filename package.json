@@ -12,12 +12,12 @@
 
 
 {
-  "name": "dashstation-engine",
+  "name": "rocon-studio",
   "version": "1.0.0",
   "description": "Game Engine",
   "main": "main.js",
   "build": {
-    "appId": "com.dashstation.app",
+    "appId": "com.rocon.app",
     "win": {
         "target": "nsis",
         "icon": "path/to/icon.ico"

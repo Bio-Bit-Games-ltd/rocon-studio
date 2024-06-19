@@ -17,7 +17,7 @@ function createWindow () {
     frame: true,
     icon: __dirname + "./icon.png",
     show: false,
-    title: "DashStation Engine",
+    title: "Rocon Studio",
     minWidth: 940,
     minHeight: 570,
     backgroundColor: "#1E1E1E"
@@ -36,7 +36,7 @@ function createWindow () {
     alwaysOnTop: false,
     resizable: false,
     icon: __dirname + "./icon.png",
-    title: "DashStation Launch"
+    title: "Rocon Launch"
   });
 
   splash.loadFile ('./app/splash.html');
