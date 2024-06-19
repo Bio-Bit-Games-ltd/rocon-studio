@@ -1,0 +1,132 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// VIEWPORT TAB :
+
+#viewport-tab{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+// VIEWPORT MENU CONTAINER :
+
+.viewport-menu-container{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// VIEWPORT CONTAINER :
+
+.viewport-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: $tab-color;
+    overflow: hidden;
+    border: $inside-tab-gap solid $tertiary-color;
+    border-top: none;
+}
+
+// VIEWPORT MENU RIGHT CONTAINER :
+
+.viewport-menu-right-container{
+    position: absolute;
+    right: 3px;
+    height: 30px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+    .viewport-menu-button{
+        position: relative;
+        height: 100%;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+        background: $tab-color;
+        outline: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        cursor: pointer;
+        @include click();
+        i{
+            position: absolute;
+            font-size: 15px;
+            color: $icon-color;
+        }
+    }
+}
+
+// VIEWPORT MENU LEFT CONTAINER : 
+
+.viewport-menu-left-container{
+    position: absolute;           
+    left: 3px;
+    height: 30px;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+    .viewport-menu-button{
+        position: relative;
+        height: 100%;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+        background: $tab-color;
+        outline: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        cursor: pointer;
+        @include click();
+        i{
+            position: absolute;
+            font-size: 15px;
+            color: $icon-color;
+        }
+    }
+}
+
+// VIEWPORT : 
+
+.viewport{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid red;
+}

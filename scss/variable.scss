@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+
+
+// FONT : 
+
+$app-font: arial;
+$debug-font: "Courier New", Courier, monospace;
+$text-1x: 11px;
+
+// DEBUG : 
+
+$debug-border: 1px solid red;
+
+// LAYOUT GAP : 
+
+$ui-container-gap: 3px;
+$inside-tab-gap: 3px;
+
+
+
+@mixin click{
+    &:hover{
+        opacity: 90%;
+    }
+    &:active{
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+# SASS PATH :
+
+sass scss/global.scss:./css/global.css
+
+# SASS WATCH PATH :
+
+sass --watch scss/global.scss:./css/global.css
+
+## GOOD LIST : https://www.youtube.com/playlist?list=PLWaKE8SEkheAm_4vJXkteaF4Lo9236w2k&jct=y1S2fxTDzY0CR9F30XDSB6hl_lkfQQ

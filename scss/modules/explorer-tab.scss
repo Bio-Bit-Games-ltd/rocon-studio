@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+
+
+// EXPLORER TAB : 
+
+#explorer-tab{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: $tab-color;
+    border: $inside-tab-gap solid $tertiary-color;
+    gap: $inside-tab-gap;
+}
+
+// EXPLORER FOLDER ROW :  
+
+$explorer-folder-row-height: 25px;
+$explorer-folder-row-gap: $inside-tab-gap;
+
+.explorer-folder-row{
+    position: relative;
+    width: 100%;
+    height: $explorer-folder-row-height;
+    box-sizing: border-box;
+    background: none;
+    // border: $explorer-folder-row-gap solid $tertiary-color; 
+    // border-top: none; 
+    // border-bottom: none;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    border-left: 3px solid $tab-color;
+    &:hover{
+        // background: $primary-color;
+        border-color: $primary-color;
+        .explorer-folder-row-right-menu-container{
+            display: flex;
+        }
+    }
+    &:active{
+        opacity: 90%;
+    }
+    i{
+        position: relative;
+        font-size: 15px;
+        color: $icon-color;
+        margin-left: 5px;
+    }
+    .explorer-folder-row-name{
+        position: relative;
+        font-family: $app-font;
+        font-weight: initial;
+        font-size: $text-1x;
+        color: $font-color;
+        margin-left: 5px;
+    }
+    .explorer-folder-row-right-menu-container{
+        position: absolute;
+        right: 5px;
+        height: 100%;
+        width: auto;
+        box-sizing: border-box;
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        button{
+            position: relative;
+            background: none;
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            @include click();
+            i{
+                position: absolute;
+                font-size: 14px;
+                color: $font-color;
+            }
+        }
+    }
+}
+
+

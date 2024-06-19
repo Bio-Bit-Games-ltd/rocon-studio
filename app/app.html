@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- META -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
+    <title></title>
+ 
+    <!-- META END -->
+
+</head>
+<body>
+
+    <!-- MAIN CONTAINER -->
+
+    <div id="main-container">
+
+        <!-- MENU BAR -->
+
+        <div id="menu-bar">
+            <button>File</button>
+            <button>Edit</button>
+            <button>Insert</button>
+            <button>Show</button>
+            <button>Explore</button>
+            <button>Run</button>
+            <button>Help</button>
+        </div>
+
+        <!-- MENU BAR END -->
+
+        <!-- ENGINE VIEW -->
+
+        <div id="engine-view">
+
+            <!-- UI LEFT CONTAINER -->
+
+            <div id="ui-left-container" class="tab-container">
+                <div class="ui-tab-container">
+                    <div class="ui-tab-row">
+                        <button class="tab-button">Explorer</button>
+                        <button class="tab-button">Asset</button>
+                    </div>
+                    <div class="ui-tab">
+                        <div id="explorer-tab" class="fullsize-tab-container">
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Assets</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-folder-row">
+                                <i class="ri-folder-fill"></i>
+                                <span class="explorer-folder-row-name">Sprites</span>
+                                <div class="explorer-folder-row-right-menu-container">
+                                    <button><i class="ri-folder-add-fill"></i></button>
+                                    <button><i class="ri-add-box-fill"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="explorer-double-path-container">
+
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI LEFT CONTAINER END -->
+
+            <!-- UI SPLITTER -->
+
+            <div id="splitter-a" class="vertical-splitter"></div>
+
+            <!-- UI SPLITTER END -->
+
+            <!-- UI CENTER CONTAINER -->
+
+            <div id="ui-center-container">
+
+                <!-- UI TOP CONTAINER -->
+
+                <div id="ui-top-container" class="tab-container">
+                    <div class="ui-tab-container">
+                        <div class="ui-tab-row">
+                            <button class="tab-button">2D View</button>
+                            <button class="tab-button">Editor</button>
+                            <button class="tab-button">Game</button>
+                            <button class="add-tab-button"><i class="ri-add-fill"></i></button>
+                        </div>
+                        <div class="ui-tab">
+
+                            <!-- VIEWPORT TAB -->
+
+                            <div id="viewport-tab">
+                                <div class="viewport-menu-container">
+                                    <div class="viewport-menu-right-container">
+                                        <button class="viewport-menu-button"><i class="ri-clockwise-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-expand-diagonal-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-drag-move-2-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-zoom-in-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-zoom-out-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-video-add-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-layout-grid-2-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-settings-4-fill"></i></button>
+                                    </div>
+                                    <div class="viewport-menu-left-container">
+                                        <button class="viewport-menu-button"><i class="ri-play-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-pause-fill"></i></button>
+                                        <button class="viewport-menu-button"><i class="ri-stop-fill"></i></button>
+                                    </div>
+                                </div>
+                                <div class="viewport-container">
+                                    <canvas id="viewport"></canvas>
+                                </div>  
+                            </div>
+
+                            <!-- VIEWPORT TAB END -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI TOP CONTAINER END -->
+
+                <!-- UI SPLITTER -->
+
+                <div id="splitter-b" class="horizontal-splitter"></div>
+                
+                <!-- UI SPLITTER END -->
+
+                <!-- UI BOTTOM CONTAINER -->
+                
+                <div id="ui-bottom-container" class="tab-container">
+                    <div class="ui-tab-container">
+                        <div class="ui-tab-row">
+                            <button class="tab-button">Timeline</button>
+                            <button id="console-tab-button" class="tab-button">Console</button>
+                            <button class="tab-button">Terminal</button>
+                        </div>
+                        <div class="ui-tab">
+                            <div id="console-tab" class="fullsize-tab-container">
+                                <span class="log-row">copyright &copy; 2024 biobit games ltda.</span>
+                                <span class="log-row">all rights reseverds.</span>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <!-- UI BOTTOM CONTAINER END -->
+
+            </div>
+
+            <!-- UI CENTER CONTAINER END -->
+
+            <!-- UI SPLITTER -->
+
+            <div id="splitter-c" class="vertical-splitter"></div>
+            
+            <!-- UI SPLITTER END -->
+
+            <!-- UI RIGHT CONTAINER -->
+            
+            <div id="ui-right-container" class="tab-container">
+                <div class="ui-tab-container">
+                    <div class="ui-tab-row">
+                        <button class="tab-button">Inspector</button>
+                        <button class="tab-button">Debug</button>
+                    </div>
+                    <div class="ui-tab">
+                        <div id="inspector-tab" class="fullsize-tab-container">
+                            <div class="inspector-container">
+                                <span class="inspector-contaier-label">Transform</span>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Scale</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Position</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Rotation</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input class="engine-input" engine-input-type="degrees" type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inspector-container">
+                                <span class="inspector-contaier-label">Sprite</span>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Sprite Start</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Sprite Level</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Anchor Point</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inspector-container">
+                                <span class="inspector-contaier-label">Label</span>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Size</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Font</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-dropdown-container">
+                                            <div class="dropdown-arrow">
+                                                <i class="ri-arrow-down-s-fill"></i>
+                                            </div>
+                                            <div class="inspector-dropdown">
+                                                <span class="inspector-dropdown-selected-label">
+                                                    Arial
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Wheight</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-dropdown-container">
+                                            <div class="dropdown-arrow">
+                                                <i class="ri-arrow-down-s-fill"></i>
+                                            </div>
+                                            <div class="inspector-dropdown">
+                                                <span class="inspector-dropdown-selected-label">
+                                                    Regular
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Opacity</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-range-container">
+                                            <span class="inspector-range-value-label">100%</span>
+                                            <input id="label-opacity-range" class="inspector-range" type="range">
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row"> 
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Controle</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Nome</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-text-input-container">
+                                            <div class="text-input-icon">
+                                                <i class="ri-keyboard-line"></i>
+                                            </div>
+                                            <input type="text" placeholder="ABC">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="inspector-container">
+                                <span class="inspector-contaier-label">Text Settings</span>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Controle</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Controle</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inspector-container">
+                                <span class="inspector-contaier-label">Text Settings</span>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Controle</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inspector-container-row">
+                                    <div class="inspector-container-label-container">
+                                        <span class="inspector-container-label">Controle</span>
+                                    </div>
+                                    <div class="inpector-container-control-container">
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                        <div class="inspector-container-input-container">
+                                            <div class="input-incrementor">
+                                                <i class="ri-expand-left-right-fill"></i>
+                                            </div>
+                                            <input type="text" placeholder="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UI RIGHT CONTAINER END -->
+
+        </div>
+
+        <!-- ENGINE VIEW END -->
+
+        <!-- STATUS BAR -->
+        
+        <div id="status-bar">
+            
+        </div>
+
+        <!-- STATUS BAR END -->
+
+    </div>
+
+    <!-- MAIN CONTAINER END -->  
+
+    <script defer type="module" src="./app.js"></script>  
+    <script src="../modules/console/console.js"></script>
+
+    <script>
+        window.onerror = function(message, source, lineno, colno, error) {
+            // Captura o erro e exibe em um span
+            console(`${message}`);
+            return true; // Impede que o navegador exiba a mensagem de erro padrão
+        };
+    </script>
+    
+</body>
+</html>

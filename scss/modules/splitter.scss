@@ -1,0 +1,52 @@
+
+
+
+
+
+
+
+
+
+
+
+
+// UI SPLITTER : 
+
+$splitter-color: $icon-color;
+$splitter-scale: $ui-container-gap;
+$vertical-splitter-width: $splitter-scale;
+$horizontal-slitter-height: $splitter-scale;
+
+.vertical-splitter{
+    position: relative;
+    height: 100%;
+    width: $vertical-splitter-width;
+    box-sizing: border-box;
+    // background: red;
+    cursor: w-resize;
+    min-width: $vertical-splitter-width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: $ui-container-gap solid $quaternary-color;
+    border-bottom: $ui-container-gap solid $quaternary-color;
+    &:active{
+        background: $splitter-color;
+    }
+}
+
+.horizontal-splitter{
+    position: relative;
+    width: 100%;
+    height: $horizontal-slitter-height;
+    box-sizing: border-box;
+    // background: $quaternary-color;
+    cursor: s-resize;
+    min-height: $horizontal-slitter-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:active{
+        background: $splitter-color;
+    }
+}

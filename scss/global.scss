@@ -1,0 +1,189 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MAIN INPORT :
+
+@import './theme.scss';
+@import './variable.scss';
+
+// MODULES INPORT :
+
+@import './modules/splitter.scss';
+@import './modules/tab.scss';
+
+// TAB : 
+
+@import './modules/console-tab.scss';
+@import './modules/inspector-tab.scss';
+@import './modules/explorer-tab.scss';
+@import './modules/2d-view-tab.scss';
+  
+// BODY :
+
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+    span{
+        text-rendering: optimizeLegibility;
+        &::selection{
+            background-color: $secondary-color;
+        }
+    }
+    input{
+        &::selection{
+            background-color: $secondary-color;
+        }
+    }
+    i{
+        text-rendering: optimizeLegibility;
+    }
+
+}
+
+// MAIN CONTAINER : 
+
+#main-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: $quaternary-color;
+    display: grid;
+    grid-template-rows: 25px 1fr 25px;
+}
+
+// MENU BAR :
+
+#menu-bar{
+    position: relative;
+    background: $tab-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    button{
+        position: relative;
+        font-family: $app-font;
+        font-weight: initial;
+        font-size: $text-1x;
+        background: none;
+        border: none;
+        outline: none;
+        height: 100%;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: $font-color;
+        cursor: pointer;
+        &:hover{
+            background: $quaternary-color;
+        }
+    }
+}
+
+// STATUS BAR : 
+
+#status-bar{
+    position: relative;
+    background: $tab-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+// ENGINE VIEW :
+
+#engine-view{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+// UI LEFT CONTAINER : 
+
+#ui-left-container{
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background: $tertiary-color;
+    border-top: $ui-container-gap solid $quaternary-color;
+    border-left: $ui-container-gap solid $quaternary-color;
+    border-bottom: $ui-container-gap solid $quaternary-color;
+}
+
+// UI CENTER CONTAINER : 
+
+#ui-center-container{
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    width: 270%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: $ui-container-gap solid $quaternary-color;
+    border-bottom: $ui-container-gap solid $quaternary-color;
+
+}
+
+// UI RIGHT CONTAINER : 
+
+#ui-right-container{
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background: $tertiary-color;
+    border-top: $ui-container-gap solid $quaternary-color;
+    border-right: $ui-container-gap solid $quaternary-color;
+    border-bottom: $ui-container-gap solid $quaternary-color;
+}
+
+// UI TOP CONTAINER :
+
+#ui-top-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+// UI BOTTOM CONTAINER :
+
+#ui-top-container{
+    position: relative;
+    width: 100%;
+    height: 200%;
+    box-sizing: border-box;
+    background: $tertiary-color;
+}
+
+// UI BOTTOM CONTAINER : 
+
+#ui-bottom-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: $tertiary-color;
+}
