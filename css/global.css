@@ -509,9 +509,6 @@
 .explorer-folder-row:hover .explorer-folder-row-right-menu-container {
   display: flex;
 }
-.explorer-folder-row:active {
-  opacity: 90%;
-}
 .explorer-folder-row i {
   position: relative;
   font-size: 15px;

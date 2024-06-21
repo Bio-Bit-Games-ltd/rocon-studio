@@ -15,6 +15,7 @@ import { tabSystem } from "../modules/tab-system/tab-system.js";
 import { console } from "../modules/console/console.js";
 import { RangeProgress } from "../modules/range-progress/range-progress.js";
 import { viewportGrid } from "../modules/viewport-grid/viewport-grid.js";
+import { viewportSelection } from "../modules/viewport-selection/viewport-selection.js";
 
 // UI IMPORTS : 
 
@@ -26,6 +27,7 @@ function appLoad(){
     console("Engine Started...", "success"); 
     console("Viewport Grid Size Changed 30x40", "success"); 
     splitter();
+    viewportSelection();
     viewportGrid(20,20)
 }
 

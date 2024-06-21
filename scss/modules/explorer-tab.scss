@@ -53,9 +53,6 @@ $explorer-folder-row-gap: $inside-tab-gap;
             display: flex;
         }
     }
-    &:active{
-        opacity: 90%;
-    }
     i{
         position: relative;
         font-size: 15px;

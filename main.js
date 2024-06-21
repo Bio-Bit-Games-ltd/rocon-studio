@@ -36,7 +36,7 @@ function createWindow () {
     alwaysOnTop: false,
     resizable: false,
     icon: __dirname + "./icon.png",
-    title: "Rocon Launch"
+    title: "Rocon Studio"
   });
 
   splash.loadFile ('./app/splash.html');
