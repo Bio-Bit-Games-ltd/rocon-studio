@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+{
+    "gameName" : "",
+    "gameDeveloper" : "",
+    "gameAppId" : "com.gamedevelopername.name",
+    "roconPackage" : [
+        {
+            "url" : "",
+            "name" : "",
+            "version" : ""
+        }
+    ]
+}

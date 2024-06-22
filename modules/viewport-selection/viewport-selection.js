@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export function viewportSelection() {
     let canvas = document.getElementById("viewport");
     let selectionBox = canvas.getContext("2d");
