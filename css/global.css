@@ -104,6 +104,7 @@
 }
 .add-tab-button:hover {
   opacity: 90%;
+  cursor: pointer;
 }
 .add-tab-button:active {
   opacity: 100%;
@@ -122,7 +123,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
@@ -548,6 +549,7 @@
 }
 .explorer-folder-row .explorer-folder-row-right-menu-container button:hover {
   opacity: 90%;
+  cursor: pointer;
 }
 .explorer-folder-row .explorer-folder-row-right-menu-container button:active {
   opacity: 100%;
@@ -572,7 +574,8 @@
 .viewport-menu-container {
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 35px;
+  min-height: 35px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -603,7 +606,7 @@
 }
 .viewport-menu-right-container .viewport-menu-button {
   position: relative;
-  height: 100%;
+  height: 30px;
   aspect-ratio: 1/1;
   box-sizing: border-box;
   background: #111111;
@@ -612,18 +615,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
   cursor: pointer;
 }
 .viewport-menu-right-container .viewport-menu-button:hover {
   opacity: 90%;
+  cursor: pointer;
 }
 .viewport-menu-right-container .viewport-menu-button:active {
   opacity: 100%;
 }
 .viewport-menu-right-container .viewport-menu-button i {
   position: absolute;
-  font-size: 15px;
+  font-size: 14px;
   color: #D9D9D9;
 }
 
@@ -640,7 +643,7 @@
 }
 .viewport-menu-left-container .viewport-menu-button {
   position: relative;
-  height: 100%;
+  height: 30px;
   aspect-ratio: 1/1;
   box-sizing: border-box;
   background: #111111;
@@ -649,18 +652,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
   cursor: pointer;
 }
 .viewport-menu-left-container .viewport-menu-button:hover {
   opacity: 90%;
+  cursor: pointer;
 }
 .viewport-menu-left-container .viewport-menu-button:active {
   opacity: 100%;
 }
 .viewport-menu-left-container .viewport-menu-button i {
   position: absolute;
-  font-size: 15px;
+  font-size: 14px;
   color: #D9D9D9;
 }
 
@@ -670,6 +673,285 @@
   height: 100%;
   box-sizing: border-box;
   border: 1px solid red;
+}
+
+#timeline-tab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111111;
+  border: 3px solid #161616;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.timeline-left-container {
+  position: relative;
+  width: 180px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.timeline-right-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.timeline-header-container {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  box-sizing: border-box;
+  background: #161616;
+  margin-bottom: 2px;
+}
+
+.timeline-track-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 35px);
+  box-sizing: border-box;
+}
+
+.timeline-header-control-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 3px;
+}
+.timeline-header-control-container button {
+  position: relative;
+  height: 30px;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  background: #111111;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.timeline-header-control-container button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+.timeline-header-control-container button:active {
+  opacity: 100%;
+}
+.timeline-header-control-container button i {
+  position: absolute;
+  font-size: 14px;
+  color: #D9D9D9;
+}
+
+.timeline-track-tracker {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.timeline-track-row {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  background: #161616;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-tracker-control {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-top: 2px solid #161616;
+  border-bottom: 2px solid #161616;
+  background: #111111;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+.timeline-tracker-control button {
+  position: relative;
+  background: none;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+}
+.timeline-tracker-control button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+.timeline-tracker-control button:active {
+  opacity: 100%;
+}
+.timeline-tracker-control button i {
+  position: absolute;
+  color: #D9D9D9;
+  font-size: 14px;
+}
+.timeline-tracker-control .tracker-control-name {
+  position: absolute;
+  left: 5px;
+  font-family: arial;
+  font-weight: initial;
+  color: #D9D9D9;
+  font-size: 11px;
+}
+
+.timeline-tracker-row {
+  border-top: 2px solid #161616;
+  border-bottom: 2px solid #161616;
+}
+
+.tracker {
+  position: absolute;
+  left: 10%;
+  width: 200px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #19A727;
+  border: 1px solid #D9D9D9;
+  display: grid;
+  grid-template-columns: 7px 1fr 7px;
+}
+.tracker .tracker-handle {
+  background: #D9D9D9;
+  cursor: w-resize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tracker .tracker-handle .tracker-handle-indicator {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: #19A727;
+}
+.tracker .tracker-handle:active .tracker-handle-indicator {
+  background: #111111;
+}
+.tracker .tracker-body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tracker .tracker-valuer-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid #19A727;
+  background: rgba(0, 0, 0, 0.1647058824);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tracker .tracker-valuer-container .tracker-name {
+  position: absolute;
+  font-family: arial;
+  font-weight: initial;
+  font-size: 11px;
+  color: #D9D9D9;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: center;
+}
+.tracker .tracker-valuer-container .tracker-value {
+  position: absolute;
+  font-family: arial;
+  font-weight: initial;
+  font-size: 11px;
+  color: #D9D9D9;
+  border: none;
+  outline: none;
+  background: none;
+  width: 25px;
+  margin: 0;
+}
+.tracker .tracker-valuer-container .tracker-value::-webkit-outer-spin-button, .tracker .tracker-valuer-container .tracker-value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.tracker .tracker-valuer-container .tracker-start-value {
+  text-align: left;
+  left: 0px;
+}
+.tracker .tracker-valuer-container .tracker-end-value {
+  text-align: right;
+  right: 0px;
+}
+.tracker:active {
+  border-style: dashed;
+}
+
+.timeline-tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 5px;
+}
+.timeline-tracker-header .timeline-ruler-value {
+  position: relative;
+  font-family: arial;
+  font-size: 11px;
+  font-weight: initial;
+  color: #D9D9D9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+.timeline-tracker-header .timeline-ruler-value::after {
+  position: relative;
+  width: 1px;
+  height: 10px;
+  background: #D9D9D9;
+  content: "";
+}
+
+#needle {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #19A727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10%;
+  z-index: 1000;
+  cursor: w-resize;
+}
+#needle::after {
+  position: absolute;
+  width: 2px;
+  height: 500%;
+  top: 30px;
+  background: #D9D9D9;
+  z-index: 999;
+  content: "";
 }
 
 body {

@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+[
+    {
+        "animationName" : "Transform",
+        "tracks" : [
+            {
+                "name" : "enter_animation",
+                "start" : "45",
+                "end" : "70",
+                "locked" : false,
+                "visible" : true,
+                "color" : "#54950B"
+
+            }
+        ]
+    }
+]

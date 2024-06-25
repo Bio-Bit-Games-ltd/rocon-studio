@@ -164,14 +164,112 @@
                 <div id="ui-bottom-container" class="tab-container">
                     <div class="ui-tab-container">
                         <div class="ui-tab-row">
-                            <button class="tab-button">Timeline</button>
+                            <button id="timeline-tab-button" class="tab-button">Timeline</button>
                             <button id="console-tab-button" class="tab-button">Console</button>
                             <button class="tab-button">Terminal</button>
                         </div>
                         <div class="ui-tab">
+
+                            <!-- CONSOLE TAB -->
+
                             <div id="console-tab" class="fullsize-tab-container">
                                 <span class="log-row">copyright &copy; 2024 biobit interactive co.</span>
                                 <span class="log-row">all rights reseverds.</span>
+                            </div>
+
+                            <!-- TIMELINE TAB -->
+
+                            <div id="timeline-tab" class="fullsize-tab-container">
+                                <div class="timeline-left-container">
+                                    <div class="timeline-header-container timeline-header-control-container">
+                                        <button><i class="ri-rewind-fill"></i> </button>
+                                        <button id="pause-animation"><i class="ri-stop-fill"></i> </button>
+                                        <button id="play-animation"><i class="ri-play-fill"></i> </button>
+                                        <button id="forward-animation"><i class="ri-speed-fill"></i> </button>
+                                        <button><i class="ri-settings-4-fill"></i> </button>
+                                    </div>
+                                    <div class="timeline-track-container timeline-track-tracker">
+                                       
+                                        <div class="timeline-track-row">
+                                            <div class="timeline-tracker-control">
+                                                <span class="tracker-control-name">Transform</span>
+                                                <button><i class="ri-lock-fill"></i></button>
+                                                <button><i class="ri-delete-bin-fill"></i></i></button>
+                                                <button><i class="ri-eye-fill"></i></button>
+                                                <button><i class="ri-add-large-fill"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-track-row">
+                                            <div class="timeline-tracker-control">
+                                                <span class="tracker-control-name">Transform</span>
+                                                <button><i class="ri-lock-fill"></i></button>
+                                                <button><i class="ri-delete-bin-fill"></i></i></button>
+                                                <button><i class="ri-eye-fill"></i></button>
+                                                <button><i class="ri-add-large-fill"></i></button>
+                                            </div>
+                                        </div>
+
+                                    </div>  
+                                </div>
+                                <div class="timeline-right-container">
+                                    <div id="track-ruler" class="timeline-header-container timeline-tracker-header">
+                                        <span class="timeline-ruler-value">01.00</span>
+                                        <span class="timeline-ruler-value">02.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">20.00</span>
+                                        <div id="needle">
+
+                                        </div>
+                                    </div>
+                                    <div class="timeline-track-container timeline-track-tracker">
+                                        
+                                        <div class="timeline-track-row timeline-tracker-row">
+                                            <div class="tracker">
+                                                <div class="tracker-handle left-tracker-handle">
+                                                    <div class="tracker-handle-indicator"></div>
+                                                </div>
+                                                <div class="tracker-body">
+                                                    <div class="tracker-valuer-container">
+                                                        <input type="number" value="10" spellcheck="false" placeholder="00" class="tracker-value tracker-start-value"/>
+                                                        <input type="text" value="Transform" spellcheck="false" placeholder="no name" class="tracker-name"/>
+                                                        <input type="number" value="10" spellcheck="false" placeholder="00" class="tracker-value tracker-end-value"/>
+                                                    </div>
+                                                </div>
+                                                <div class="tracker-handle right-tracker-handle">
+                                                    <div class="tracker-handle-indicator"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-track-row timeline-tracker-row">
+                                            <div class="tracker">
+                                                <div class="tracker-handle left-tracker-handle">
+                                                    <div class="tracker-handle-indicator"></div>
+                                                </div>
+                                                <div class="tracker-body">
+                                                    <div class="tracker-valuer-container">
+                                                        <input type="number" value="10" spellcheck="false" placeholder="00" class="tracker-value tracker-start-value"/>
+                                                        <input type="text" value="Transform" spellcheck="false" placeholder="no name" class="tracker-name"/>
+                                                        <input type="number" value="10" spellcheck="false" placeholder="00" class="tracker-value tracker-end-value"/>
+                                                    </div>
+                                                </div>
+                                                <div class="tracker-handle right-tracker-handle">
+                                                    <div class="tracker-handle-indicator"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+           
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div> 

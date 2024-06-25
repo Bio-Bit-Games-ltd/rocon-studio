@@ -5,7 +5,7 @@
 
 
 
-
+$tab-header-height: 35px;
 
 // FONT : 
 
@@ -27,8 +27,29 @@ $inside-tab-gap: 3px;
 @mixin click{
     &:hover{
         opacity: 90%;
+        cursor: pointer;
     }
     &:active{
         opacity: 100%;
     }
+}
+
+@mixin buttonIcon{
+        height: 30px;
+        aspect-ratio: 1/1;
+        box-sizing: border-box;
+        background: $tab-color;
+        outline: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border-radius: 3px;
+        cursor: pointer;
+        @include click();
+        i{
+            position: absolute;
+            font-size: 14px;
+            color: $icon-color;
+        }
 }

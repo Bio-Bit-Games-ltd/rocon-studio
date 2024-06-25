@@ -12,7 +12,7 @@
 {
     "gameName" : "",
     "gameDeveloper" : "",
-    "gameAppId" : "com.gamedevelopername.name",
+    "gameId" : "com.gamedevelopername.name",
     "roconPackage" : [
         {
             "url" : "",
