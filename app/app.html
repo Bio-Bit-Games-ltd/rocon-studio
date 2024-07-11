@@ -183,8 +183,8 @@
                                 <div class="timeline-left-container">
                                     <div class="timeline-header-container timeline-header-control-container">
                                         <button><i class="ri-rewind-fill"></i> </button>
-                                        <button id="pause-animation"><i class="ri-stop-fill"></i> </button>
-                                        <button id="play-animation"><i class="ri-play-fill"></i> </button>
+                                        <button id="stop-animation"><i class="ri-stop-fill stop-animation-button-icon"></i> </button>
+                                        <button id="play-animation"><i class="ri-play-fill play-animation-button-icon"></i> </button>
                                         <button id="forward-animation"><i class="ri-speed-fill"></i> </button>
                                         <button><i class="ri-settings-4-fill"></i> </button>
                                     </div>
@@ -210,6 +210,10 @@
                                             </div>
                                         </div>
 
+                                        <div class="timeline-track-row">
+                                            <button class="timeline-create-tracker">Create<i class="ri-add-fill"></i></button>
+                                        </div>
+
                                     </div>  
                                 </div>
                                 <div class="timeline-right-container">
@@ -226,9 +230,8 @@
                                         <span class="timeline-ruler-value">20.00</span>
                                         <span class="timeline-ruler-value">20.00</span>
                                         <span class="timeline-ruler-value">20.00</span>
-                                        <div id="needle">
-
-                                        </div>
+                                        <div id="needle"></div>
+                                        <div id="pre-needle"></div>
                                     </div>
                                     <div class="timeline-track-container timeline-track-tracker">
                                         
@@ -266,6 +269,9 @@
                                                     <div class="tracker-handle-indicator"></div>
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="timeline-track-row timeline-tracker-row">
                                         </div>
            
                                     </div>
@@ -454,11 +460,11 @@
                                     </div>
                                     <div class="inpector-container-control-container">
                                         <div class="inspector-container-range-container">
-                                            <span class="inspector-range-value-label">100%</span>
+                                            <span class="inspector-range-value-label">10.0</span>
                                             <input id="label-opacity-range" class="inspector-range" type="range">
                                         </div> 
                                     </div>
-                                </div>
+                                </div> 
                                 <div class="inspector-container-row"> 
                                     <div class="inspector-container-label-container">
                                         <span class="inspector-container-label">Controle</span>

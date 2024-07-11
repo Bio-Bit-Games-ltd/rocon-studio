@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded",appLoad());
 // TAB MANAGE : 
 
 consoleTabButton.addEventListener("click",function(){
-    console("Console tab opened", "log"); 
     tab("console");
 });
 

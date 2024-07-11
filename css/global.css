@@ -3,7 +3,7 @@
   height: 100%;
   width: 3px;
   box-sizing: border-box;
-  cursor: w-resize;
+  cursor: col-resize;
   min-width: 3px;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@
   width: 100%;
   height: 3px;
   box-sizing: border-box;
-  cursor: s-resize;
+  cursor: row-resize;
   min-height: 3px;
   display: flex;
   justify-content: center;
@@ -414,8 +414,8 @@
 .inspector-container-range-container .inspector-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: #D9D9D9;
-  width: 15px;
-  height: 6px;
+  width: 17px;
+  height: 4px;
   border: 1px solid #D9D9D9;
   cursor: pointer;
 }
@@ -937,21 +937,61 @@
   height: 100%;
   box-sizing: border-box;
   background: #19A727;
+  left: 0px;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 10%;
-  z-index: 1000;
   cursor: w-resize;
 }
-#needle::after {
+#needle::before {
   position: absolute;
   width: 2px;
   height: 500%;
-  top: 30px;
+  top: 35px;
   background: #D9D9D9;
-  z-index: 999;
+  z-index: 800;
   content: "";
+}
+#needle:active {
+  background: #b96f00;
+}
+
+#pre-needle {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #D9D9D9;
+  display: none;
+  left: 10px;
+  z-index: 50;
+}
+
+.timeline-create-tracker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-top: 2px solid #161616;
+  border-bottom: 2px solid #161616;
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  color: #D9D9D9;
+  font-weight: initial;
+  font-size: 11px;
+  outline: none;
+}
+.timeline-create-tracker:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+.timeline-create-tracker:active {
+  opacity: 100%;
 }
 
 body {

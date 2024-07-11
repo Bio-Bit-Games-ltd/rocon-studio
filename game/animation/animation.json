@@ -8,9 +8,14 @@
 
 
 
+
+
+
+
 [
     {
         "animationName" : "Transform",
+        "animationType" : "transform",
         "tracks" : [
             {
                 "name" : "enter_animation",
@@ -19,7 +24,7 @@
                 "locked" : false,
                 "visible" : true,
                 "color" : "#54950B"
-
+ 
             }
         ]
     }

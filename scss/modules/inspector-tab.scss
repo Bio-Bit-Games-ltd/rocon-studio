@@ -280,8 +280,8 @@ $inspector-container-inside-gap: 5px;
         &::-webkit-slider-thumb {
             -webkit-appearance:none; 
             background: $icon-color;
-            width: 15px;
-            height: 6px;
+            width: 17px;
+            height: 4px;
             border: 1px solid $icon-color;
             cursor:pointer;
             &:active{
