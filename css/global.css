@@ -324,7 +324,7 @@
 }
 .inspector-container-input-container .input-incrementor i {
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   color: #D9D9D9;
 }
 .inspector-container-input-container .input-incrementor:active i {
@@ -380,7 +380,7 @@
 }
 .inspector-container-dropdown-container .dropdown-arrow i {
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   color: #D9D9D9;
 }
 .inspector-container-dropdown-container .dropdown-arrow:active i {
@@ -472,7 +472,7 @@
 }
 .inspector-container-text-input-container .text-input-icon i {
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   color: #D9D9D9;
 }
 
@@ -574,8 +574,8 @@
 .viewport-menu-container {
   position: relative;
   width: 100%;
-  height: 35px;
-  min-height: 35px;
+  height: 29px;
+  min-height: 29px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -606,7 +606,7 @@
 }
 .viewport-menu-right-container .viewport-menu-button {
   position: relative;
-  height: 30px;
+  height: 25px;
   aspect-ratio: 1/1;
   box-sizing: border-box;
   background: #111111;
@@ -626,7 +626,7 @@
 }
 .viewport-menu-right-container .viewport-menu-button i {
   position: absolute;
-  font-size: 14px;
+  font-size: 12px;
   color: #D9D9D9;
 }
 
@@ -643,7 +643,7 @@
 }
 .viewport-menu-left-container .viewport-menu-button {
   position: relative;
-  height: 30px;
+  height: 25px;
   aspect-ratio: 1/1;
   box-sizing: border-box;
   background: #111111;
@@ -663,7 +663,7 @@
 }
 .viewport-menu-left-container .viewport-menu-button i {
   position: absolute;
-  font-size: 14px;
+  font-size: 12px;
   color: #D9D9D9;
 }
 
@@ -691,7 +691,7 @@
 
 .timeline-left-container {
   position: relative;
-  width: 180px;
+  width: 160px;
   height: 100%;
   box-sizing: border-box;
 }
@@ -706,7 +706,7 @@
 .timeline-header-container {
   position: relative;
   width: 100%;
-  height: 35px;
+  height: 29px;
   box-sizing: border-box;
   background: #161616;
   margin-bottom: 2px;
@@ -715,7 +715,7 @@
 .timeline-track-container {
   position: relative;
   width: 100%;
-  height: calc(100% - 35px);
+  height: calc(100% - 29px);
   box-sizing: border-box;
 }
 
@@ -728,7 +728,7 @@
 }
 .timeline-header-control-container button {
   position: relative;
-  height: 30px;
+  height: 25px;
   aspect-ratio: 1/1;
   box-sizing: border-box;
   background: #111111;
@@ -748,7 +748,7 @@
 }
 .timeline-header-control-container button i {
   position: absolute;
-  font-size: 14px;
+  font-size: 12px;
   color: #D9D9D9;
 }
 
@@ -783,6 +783,7 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+  padding-right: 3px;
 }
 .timeline-tracker-control button {
   position: relative;
@@ -792,7 +793,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
+  width: 17px;
 }
 .timeline-tracker-control button:hover {
   opacity: 90%;
@@ -804,7 +805,7 @@
 .timeline-tracker-control button i {
   position: absolute;
   color: #D9D9D9;
-  font-size: 14px;
+  font-size: 12px;
 }
 .timeline-tracker-control .tracker-control-name {
   position: absolute;
@@ -948,7 +949,7 @@
   position: absolute;
   width: 2px;
   height: 500%;
-  top: 35px;
+  top: 29px;
   background: #D9D9D9;
   z-index: 800;
   content: "";

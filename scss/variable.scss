@@ -5,13 +5,14 @@
 
 
 
-$tab-header-height: 35px;
+$tab-header-height: 29px;
 
 // FONT : 
 
 $app-font: arial;
 $debug-font: "Courier New", Courier, monospace;
 $text-1x: 11px;
+$icon-size: 12px;
 
 // DEBUG : 
 
@@ -21,8 +22,6 @@ $debug-border: 1px solid red;
 
 $ui-container-gap: 3px;
 $inside-tab-gap: 3px;
-
-
 
 @mixin click{
     &:hover{
@@ -35,7 +34,7 @@ $inside-tab-gap: 3px;
 }
 
 @mixin buttonIcon{
-        height: 30px;
+        height: 25px;
         aspect-ratio: 1/1;
         box-sizing: border-box;
         background: $tab-color;
@@ -49,7 +48,7 @@ $inside-tab-gap: 3px;
         @include click();
         i{
             position: absolute;
-            font-size: 14px;
+            font-size: $icon-size;
             color: $icon-color;
         }
 }

@@ -182,7 +182,7 @@ $inspector-container-inside-gap: 5px;
         cursor: w-resize;
         i{
             position: relative;
-            font-size: 15px;
+            font-size: $icon-size;
             color: $icon-color;
         }
         &:active{
@@ -242,7 +242,7 @@ $inspector-container-inside-gap: 5px;
         z-index: 1;
         i{
             position: relative;
-            font-size: 15px;
+            font-size: $icon-size;
             color: $icon-color;
         }
         &:active{
@@ -341,7 +341,7 @@ $inspector-container-inside-gap: 5px;
         z-index: 1;
         i{
             position: relative;
-            font-size: 15px;
+            font-size: $icon-size;
             color: $icon-color;
         }
     }

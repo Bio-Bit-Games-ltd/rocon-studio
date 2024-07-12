@@ -48,7 +48,7 @@
 
 .timeline-left-container{
     position: relative;
-    width: 180px;
+    width: 160px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -139,6 +139,7 @@ $tracker-in-border: 2px;
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
+    padding-right: 3px;
     button{
         position: relative;
         background: none;
@@ -147,12 +148,12 @@ $tracker-in-border: 2px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 20px;
+        width: 17px;
         @include click();
         i{
             position: absolute;
             color: $icon-color;
-            font-size: 14px;
+            font-size: $icon-size;
         }
     }
     .tracker-control-name{
@@ -308,7 +309,7 @@ $tracker-in-border: 2px;
         position: absolute;
         width: 2px;
         height: 500%;
-        top: 35px;
+        top: $tab-header-height;
         background: $secondary-color; 
         z-index: 800;
         content: '';

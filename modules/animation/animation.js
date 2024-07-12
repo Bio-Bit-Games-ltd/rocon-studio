@@ -10,7 +10,7 @@
 
 import { console } from "../console/console.js";
 
-let primaryColor = "#19A727";
+let primaryColor = "#19A727";    
 
 export function animation() {
 
