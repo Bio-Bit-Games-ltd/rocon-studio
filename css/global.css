@@ -512,7 +512,7 @@
 }
 .explorer-folder-row i {
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   color: #D9D9D9;
   margin-left: 5px;
 }
@@ -543,7 +543,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
+  width: 17px;
   aspect-ratio: 1/1;
   cursor: pointer;
 }
@@ -556,7 +556,7 @@
 }
 .explorer-folder-row .explorer-folder-row-right-menu-container button i {
   position: absolute;
-  font-size: 14px;
+  font-size: #D9D9D9;
   color: #D9D9D9;
 }
 

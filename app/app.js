@@ -17,11 +17,13 @@ import { RangeProgress } from "../modules/range-progress/range-progress.js";
 import { viewportGrid } from "../modules/viewport-grid/viewport-grid.js";
 import { viewportSelection } from "../modules/viewport-selection/viewport-selection.js";
 import { animation } from "../modules/animation/animation.js";
+import { tabHighlight } from "../modules/tab/tab-highlight.js";
 
 // UI IMPORTS : 
 
 const consoleTabButton = document.getElementById("console-tab-button");
 const timelineTabButton = document.getElementById("timeline-tab-button");
+const tabCButton = document.querySelectorAll(".tab-c-button")
 
 // APP LOAD : 
 
@@ -32,6 +34,7 @@ function appLoad(){
     viewportSelection();
     viewportGrid(20,20)
     animation();
+    tabHighlight();
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());
@@ -51,7 +54,7 @@ timelineTabButton.addEventListener("click",function(){
 const inputRange = document.querySelectorAll(".inspector-range");
 
 const inputRangee = document.getElementById("label-opacity-range");
-const uiRangeProgress = new RangeProgress(inputRangee);
+const uiRangeProgress = new RangeProgress(inputRange);
 
 
 

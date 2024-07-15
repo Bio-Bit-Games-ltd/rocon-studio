@@ -55,7 +55,7 @@ $explorer-folder-row-gap: $inside-tab-gap;
     }
     i{
         position: relative;
-        font-size: 15px;
+        font-size: $icon-size;
         color: $icon-color;
         margin-left: 5px;
     }
@@ -85,13 +85,13 @@ $explorer-folder-row-gap: $inside-tab-gap;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20px;
+            width: 17px;
             aspect-ratio: 1/1;
             cursor: pointer;
             @include click();
             i{
                 position: absolute;
-                font-size: 14px;
+                font-size: $icon-color;
                 color: $font-color;
             }
         }

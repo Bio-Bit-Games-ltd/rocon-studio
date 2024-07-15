@@ -21,9 +21,7 @@ export function console(text,type){
     const logRow = document.createElement("span");
     logRow.className = "log-row";
 
-    if (type === "log"){
-        consoleTabButton.style.borderColor = "";
-    }else if (type === "error"){
+    if (type === "error"){
         consoleTabButton.style.borderColor = alertColor;
     }
 
@@ -31,7 +29,7 @@ export function console(text,type){
         const now = new Date();
         let hours = now.getHours();
         let minutes = now.getMinutes();
-        let seconds = now.getSeconds();
+        let seconds = now.getSeconds(); 
     
         hours = hours < 10 ? '0' + hours : hours;
         minutes = minutes < 10 ? '0' + minutes : minutes;
