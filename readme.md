@@ -1,5 +1,6 @@
 ![Rocon Studio](https://ik.imagekit.io/artim/Rocon%20Studio/GitHub/rocon-studio-gh-banner.png?updatedAt=1721022138658)
 
+![Electron](https://img.shields.io/badge/electron-191970?style=for-the-badge&logo=electron&logoColor=white)
 
 # Rocon Studio 
 
