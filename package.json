@@ -9,25 +9,23 @@
 
 
 
-
-
 {
   "name": "rocon-studio",
   "version": "1.0.0",
-  "description": "Game Engine",
+  "description": "application-builder",
   "main": "main.js",
   "build": {
     "appId": "com.rocon.app",
     "win": {
-        "target": "nsis",
-        "icon": "path/to/icon.ico"
+      "target": "nsis",
+      "icon": "path/to/icon.ico"
     },
     "npmRebuild": false,
     "asarUnpack": [
-        "**/*.node"
+      "**/*.node"
     ],
     "directories": {
-        "output": "dist"
+      "output": "dist"
     }
   },
   "scripts": {
@@ -36,7 +34,7 @@
     "electron": "electron .",
     "build": "electron-builder"
   },
-  "author": "BioBit Games Ltda.",
+  "author": "BioBit Interactive Co.",
   "license": "ISC",
   "devDependencies": {
     "electron": "^30.0.2",
@@ -44,7 +42,9 @@
   },
   "dependencies": {
     "electron-reload": "^2.0.0-alpha.1",
+    "jsdom": "^24.1.0",
     "npm-run-all": "^4.1.5",
+    "pixi.js": "^8.2.5",
     "remixicon": "^4.2.0"
   }
 }

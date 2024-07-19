@@ -24,7 +24,6 @@ async function animationPath(directory) {
     }
 }
 
-// Exemplo de uso
 const dirPath = 'C:/Users/Rhyan Eduardo/Documents/GitHub/rocon-studio/game/animation'; // Substitua pelo caminho do seu diretório
 
 animationPath(dirPath)

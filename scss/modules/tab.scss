@@ -84,26 +84,29 @@ $tab-row-heihgt: 30px;
 
 .add-tab-button{
     position: relative;
-    background: none;
-    width: 20px;
+    font-family: $app-font;
+    font-size: $text-1x;
+    font-weight: initial;
+    color: $font-color;
+    text-align: center;
     height: 100%;
+    aspect-ratio: 1/1;
+    background: $tab-color; 
     box-sizing: border-box;
     border: none;
     outline: none;
     cursor: pointer;
+    border-top: 3px solid $icon-color;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include click();
     i{
         position: absolute;
         font-size: 15px;
         color: $icon-color;
     }
-    &:hover{
-        i{
-            color: $primary-color;
-        }
+    &:active{
+        border-color: $primary-color;
     }
 }
 

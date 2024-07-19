@@ -1,0 +1,87 @@
+
+
+
+
+
+
+
+
+
+
+
+
+// CONSOLE TAB : 
+
+#terminal-tab{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: none; // EDIT
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: $tab-color;
+    border: $inside-tab-gap solid $tertiary-color;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 8px;
+        left: -5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $icon-color; 
+        width: 5px;
+        border-top: $inside-tab-gap solid $tertiary-color;
+        border-bottom: $inside-tab-gap solid $tertiary-color;
+        border-left: $inside-tab-gap solid $tertiary-color;
+        &:active{
+            background: $icon-color;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+}
+
+// LOG ROW :
+
+.terminal-log-row{
+    position: relative;
+    width: 100%;
+    font-family: $debug-font;
+    font-size: 12px;
+    font-weight: inherit;
+    color: $font-color;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    user-select: text !important;
+    cursor: text;
+    z-index: 2;
+    &:nth-of-type(1){
+        padding-top: 3px;
+        z-index: 1;
+    }
+}
+
+// TERMINAL INPUT : 
+
+#terminal-input{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: $debug-font;
+    font-size: 12px;
+    font-weight: inherit;
+    color: $font-color;
+    text-align: left;
+    padding-left: 5px;
+}

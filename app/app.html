@@ -116,9 +116,10 @@
                             <button class="tab-button">2D View</button>
                             <button class="tab-button">Editor</button>
                             <button class="tab-button">Game</button>
+                            <button class="tab-button">Window</button>
                             <button class="add-tab-button"><i class="ri-add-fill"></i></button>
                         </div>
-                        <div class="ui-tab">
+                        <div class="ui-tab">   
 
                             <!-- VIEWPORT TAB -->
 
@@ -166,7 +167,7 @@
                         <div class="ui-tab-row">
                             <button id="timeline-tab-button" class="tab-button tab-c-button">Timeline</button>
                             <button id="console-tab-button" class="tab-button tab-c-button">Console</button>
-                            <button class="tab-button tab-c-button">Terminal</button>
+                            <button id="terminal-tab-button" class="tab-button tab-c-button">Terminal</button>
                         </div>
                         <div class="ui-tab">
 
@@ -175,6 +176,14 @@
                             <div id="console-tab" class="fullsize-tab-container">
                                 <span class="log-row">copyright &copy; 2024 biobit interactive co.</span>
                                 <span class="log-row">all rights reseverds.</span>
+                            </div>
+
+                            <!-- TERMINAL TAB -->
+
+                            <div id="terminal-tab" class="fullsize-tab-container">
+                                <span class="terminal-log-row">copyright &copy; 2024 biobit interactive co.</span>
+                                <span class="terminal-log-row">all rights reseverds.</span>
+                                <input id="terminal-input" spellcheck="false" type="text" placeholder="enter a prompt">
                             </div>
 
                             <!-- TIMELINE TAB -->
@@ -219,17 +228,16 @@
                                 <div class="timeline-right-container">
                                     <div id="track-ruler" class="timeline-header-container timeline-tracker-header">
                                         <span class="timeline-ruler-value">01.00</span>
-                                        <span class="timeline-ruler-value">02.00</span>
+                                        <span class="timeline-ruler-value">10.00</span>
                                         <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
-                                        <span class="timeline-ruler-value">20.00</span>
+                                        <span class="timeline-ruler-value">30.00</span>
+                                        <span class="timeline-ruler-value">40.00</span>
+                                        <span class="timeline-ruler-value">50.00</span>
+                                        <span class="timeline-ruler-value">60.00</span>
+                                        <span class="timeline-ruler-value">70.00</span>
+                                        <span class="timeline-ruler-value">80.00</span>
+                                        <span class="timeline-ruler-value">90.00</span>
+                                        <span class="timeline-ruler-value">100.00</span>
                                         <div id="needle"></div>
                                         <div id="pre-needle"></div>
                                     </div>
