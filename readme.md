@@ -1,5 +1,10 @@
 ![Rocon Studio](https://ik.imagekit.io/artim/Rocon%20Studio/GitHub/rocon-studio-gh-banner.png?updatedAt=1721022138658)
 
+![Electron](https://img.shields.io/badge/electron-191970?style=for-the-badge&logo=electron&logoColor=white) 
+![Node.js](https://img.shields.io/badge/node.js-43853d?style=for-the-badge&logo=node.js&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![WebGL](https://img.shields.io/badge/webgl-990000?style=for-the-badge&logo=webgl&logoColor=white)
+![Open Source](https://img.shields.io/badge/open%20source-327E36?style=for-the-badge&logo=open-source-initiative&logoColor=white)
 
 # Rocon Studio 
 
