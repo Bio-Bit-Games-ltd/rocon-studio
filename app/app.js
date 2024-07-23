@@ -19,7 +19,7 @@ import { RangeProgress } from "../modules/range-progress/range-progress.js";
 import { viewportGrid } from "../modules/viewport-grid/viewport-grid.js";
 import { viewportSelection } from "../modules/viewport-selection/viewport-selection.js";
 import { animation } from "../modules/animation/animation.js";
-import { tabHighlight } from "../modules/tab/tab-highlight.js";
+import { tabHighlight } from "../modules/tab-highlight/tab-highlight.js";
 // import { applicationPath } from "../modules/application-path/application-path.js"
 
 // UI IMPORTS : 
