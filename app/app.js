@@ -20,6 +20,7 @@ import { viewportGrid } from "../modules/viewport-grid/viewport-grid.js";
 import { viewportSelection } from "../modules/viewport-selection/viewport-selection.js";
 import { animation } from "../modules/animation/animation.js";
 import { tabHighlight } from "../modules/tab-highlight/tab-highlight.js";
+import { inspector } from "../modules/inspector/inspector.js";
 // import { applicationPath } from "../modules/application-path/application-path.js"
 
 // UI IMPORTS : 
@@ -40,6 +41,7 @@ function appLoad(){
     viewportGrid(20,20)
     animation();
     tabHighlight();
+    inspector();
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());

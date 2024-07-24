@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+
+
+
+
+// UI DRODOWN : 
+
+#ui-dropdown{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    background: $quaternary-color;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid $tab-color;
+    .ui-dropdown-button{
+        position: relative;
+        width: 100%;
+        height: 23px;
+        box-sizing: border-box;
+        font-family: $app-font;
+        font-weight: initial;
+        font-size: $text-1x;
+        color: $font-color;
+        text-align: left;
+        background: none;
+        cursor: pointer;
+        outline: none;
+        border: 2px solid $quaternary-color;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        i{
+            position: absolute;
+            right: 6px;
+            color: $font-color;
+            font-size: $icon-size;
+        }
+        &:hover{
+            background: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+}
