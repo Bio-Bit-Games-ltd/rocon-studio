@@ -127,11 +127,30 @@
   align-items: center;
   flex-direction: column;
   border: 1px solid #111111;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#ui-dropdown::-webkit-scrollbar {
+  background: none;
+  width: 5px;
+  left: -5px;
+}
+#ui-dropdown::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  width: 5px;
+}
+#ui-dropdown::-webkit-scrollbar-thumb:active {
+  background: #D9D9D9;
+}
+#ui-dropdown::-webkit-scrollbar-track {
+  background: none;
 }
 #ui-dropdown .ui-dropdown-button {
   position: relative;
   width: 100%;
   height: 23px;
+  min-height: 23px;
   box-sizing: border-box;
   font-family: arial;
   font-weight: initial;
@@ -167,6 +186,47 @@
   display: none;
   justify-content: center;
   align-items: center;
+}
+
+.window-container {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  z-index: 200;
+  background: #161616;
+  border: 1px solid #111111;
+  left: 50%;
+  top: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.window-title-bar {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background: #111111;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.window-title-bar .window-name {
+  position: absolute;
+  left: 15px;
+  font-family: arial;
+  font-size: 11px;
+  font-weight: initial;
+  color: #D9D9D9;
+}
+
+.window-content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 #console-tab {
@@ -1189,7 +1249,7 @@ body i {
   flex-direction: row;
 }
 
-#engine-view {
+#ui-view {
   position: relative;
   display: flex;
   justify-content: center;

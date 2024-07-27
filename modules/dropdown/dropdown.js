@@ -16,6 +16,7 @@ import { getUi } from "../get-ui/get-ui.js";
 import { shild } from "../shild/shild.js";
 
 const uiDropdown = getUi("ui-dropdown");
+const mainView = getUi("main-container");
 let dropdownTimeout;
 
 export function dropdown(dropdownTo,option) {
@@ -24,7 +25,10 @@ export function dropdown(dropdownTo,option) {
     uiDropdown.style.display = "flex";
     shild({visible: true, opaque: false});
 
-    const dropdownToRect = dropdownTo.getBoundingClientRect();
+    let dropdownToRect = dropdownTo.getBoundingClientRect();
+    let uiDropdownRect = uiDropdown.getBoundingClientRect();
+    let mainViewRect = mainView.getBoundingClientRect();
+
     const getHeight = dropdownToRect.height;
     const getTop = dropdownToRect.top;
     const setToBottom = getTop + getHeight + 3;
@@ -33,14 +37,21 @@ export function dropdown(dropdownTo,option) {
     uiDropdown.style.width = `${dropdownToRect.width}px`;
     uiDropdown.style.top = `${setToBottom}px`;
 
-    if (dropdownTimeout) {
-        clearTimeout(dropdownTimeout);
+    const mainViewHeight = mainViewRect.height;
+    const newDropdownHeight = mainView.offsetHeight - uiDropdown.offsetTop - 29;
+
+    if (uiDropdownRect.bottom < mainView.offsetHeight) {
+        uiDropdown.style.height = "auto";
+    }else {
+        uiDropdown.style.height = `${newDropdownHeight}px`;
     }
+
+    if (dropdownTimeout) { clearTimeout(dropdownTimeout); }
 
     dropdownTimeout = setTimeout(() => {
         document.addEventListener('click', handleClickOutside);
     }, 100);
-
+ 
     for (let i = 0; i < option.length; i++) {
         const dropdownButton = document.createElement("button");
         dropdownButton.classList.add("ui-dropdown-button");
@@ -53,6 +64,12 @@ export function dropdown(dropdownTo,option) {
         dropdownButton.appendChild(dropdownIcon);
         uiDropdown.appendChild(dropdownButton);
     }
+
+    window.addEventListener('resize', () => {
+        uiDropdown.style.display = "none";
+        shild({visible: false, opaque: false});
+    });
+    
 }
 
 function handleClickOutside(event) {

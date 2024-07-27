@@ -21,10 +21,29 @@
     align-items: center;
     flex-direction: column;
     border: 1px solid $tab-color;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 5px;
+        left: -5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $icon-color;  
+        width: 5px;
+        &:active{
+            background: $icon-color;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
     .ui-dropdown-button{
         position: relative;
         width: 100%;
         height: 23px;
+        min-height: 23px;
         box-sizing: border-box;
         font-family: $app-font;
         font-weight: initial;

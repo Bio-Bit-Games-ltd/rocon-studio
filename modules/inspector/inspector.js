@@ -14,17 +14,23 @@
 
 import { getUi } from "../get-ui/get-ui.js"
 import { dropdown } from "../dropdown/dropdown.js";
+import { console } from "../console/console.js";
 
 const inspectorDropdownFontWheight = getUi("inspector-dropdown-font-wheight");
 
 export function inspector(){
 
-    inspectorDropdownFontWheight.addEventListener("click",function(){
+
+
+
+
+
+    function handleFontDropdown(){
         const options = [
             {
-            name : "Bold",
-            id : "ggt",
-            icon : "ri-home-3-line"
+                name : "Bold",
+                id : "bold-id",
+                icon : "ri-home-3-line"
             },
             {
                 name : "Regular",
@@ -36,8 +42,16 @@ export function inspector(){
                 id : "ggt",
                 icon : "ri-home-3-line"
             }
+           
         ]
         dropdown(inspectorDropdownFontWheight,options);
-    });
+
+        const fontBold = getUi("bold-id").addEventListener("click",function(){
+            console("Font Bold Setado!","success");
+        })
+
+    }
+
+    inspectorDropdownFontWheight.addEventListener("click",handleFontDropdown)
 
 }

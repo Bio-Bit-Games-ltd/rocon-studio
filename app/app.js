@@ -21,7 +21,7 @@ import { viewportSelection } from "../modules/viewport-selection/viewport-select
 import { animation } from "../modules/animation/animation.js";
 import { tabHighlight } from "../modules/tab-highlight/tab-highlight.js";
 import { inspector } from "../modules/inspector/inspector.js";
-// import { applicationPath } from "../modules/application-path/application-path.js"
+import { shild } from "../modules/shild/shild.js";
 
 // UI IMPORTS : 
 
@@ -30,7 +30,6 @@ const consoleTabButton = getUi("console-tab-button");
 const timelineTabButton = getUi("timeline-tab-button");
 // const tabCButton = document.querySelectorAll(".tab-c-button")
 const terminalInput = getUi("terminal-input");
-
 
 // APP LOAD : 
 
@@ -42,6 +41,8 @@ function appLoad(){
     animation();
     tabHighlight();
     inspector();
+
+    shild({visible : true, opaque : true});
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());
