@@ -431,6 +431,31 @@
   color: #19A727;
 }
 
+.control-row-button {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  background: #161616;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control-row-button i {
+  position: absolute;
+  font-size: 12px;
+  color: #D9D9D9;
+}
+.control-row-button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+.control-row-button:active {
+  opacity: 100%;
+}
+
 .control-row-container-dropdown-container {
   position: relative;
   width: 100%;

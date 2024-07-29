@@ -158,6 +158,27 @@ $control-row-container-inside-gap: 5px;
     }
 }
 
+// CONTROL ROW BUTTON : 
+
+.control-row-button{
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    background: $tertiary-color;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+        position: absolute;
+        font-size: $icon-size;
+        color: $icon-color;
+    }
+    @include click();
+}
+
 // control-row CONTAINER DROPDOWN CONTAINER : 
 
 .control-row-container-dropdown-container{

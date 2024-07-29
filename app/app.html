@@ -25,6 +25,10 @@
     <div id="window-create-content" class="window-content-flex-center non-renderable">
         <div class="window-create-content-left window-content-scroll">
             <div class="preset-container">
+                <span class="preset-name">blank</span>
+                <i class="preset-icon ri-file-3-fill"></i>
+            </div>
+            <div class="preset-container">
                 <span class="preset-name">Windows</span>
                 <i class="preset-icon ri-windows-fill"></i>
             </div>
@@ -53,12 +57,12 @@
                 <i class="preset-icon ri-puzzle-2-fill"></i>
             </div>
             <div class="preset-container">
-                <span class="preset-name">blank</span>
-                <i class="preset-icon ri-file-3-fill"></i>
-            </div>
-            <div class="preset-container">
                 <span class="preset-name">Packager</span>
                 <i class="preset-icon ri-box-3-fill"></i>
+            </div>
+            <div class="preset-container">
+                <span class="preset-name">Game</span>
+                <i class="preset-icon ri-gamepad-fill"></i>
             </div>
         </div>
         <div class="window-create-content-right window-content-flex-column window-content-scroll">
@@ -111,6 +115,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="control-row-container-row">
+                    <div class="control-row-container-label-container">
+                        <span class="control-row-container-label">Language</span>
+                    </div>
+                    <div class="inpector-container-control-container">
+                        <div id="inspector-dropdown-n-font-wheight" class="control-row-container-dropdown-container">
+                            <div class="dropdown-arrow">
+                                <i class="ri-arrow-down-s-fill"></i>
+                            </div>
+                            <div class="control-row-dropdown">
+                                <span class="control-row-dropdown-selected-label">
+                                    Javascript
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="control-row-container">
                 <span class="control-row-contaier-label">Directory</span>
@@ -125,6 +146,7 @@
                             </div>
                             <input type="text" placeholder="ABC">
                         </div>
+                        <button class="control-row-button"><i class="ri-folder-fill"></i></button>
                     </div>
                 </div>
             </div>
