@@ -18,12 +18,13 @@
     z-index: 200;
     background: $tertiary-color;
     border: 1px solid $tab-color;
-    left: 50%;
+    left: 40%;
     top: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    resize: both;
 } 
 
 // WINDOW TITLE BAR : 
@@ -37,13 +38,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top: $top-highlight-height solid $primary-color;
     .window-name{
         position: absolute;
-        left: 15px;
+        left: 23px;
         font-family: $app-font;
         font-size: $text-1x;
         font-weight: initial;
         color: $font-color;
+    }
+    .window-icon{
+        position: absolute;
+        left: 7px;
+        width: 10px;
+    }
+    .window-close{
+        position: absolute;
+        right: 5px;
+        background: none;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10px;
+        height: 10px;
+        i{
+            position: absolute;
+            font-size: $icon-size;
+            color: $icon-color;
+            cursor: pointer;
+        }
+        @include click();
     }
 }
 
@@ -54,4 +80,51 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+// WINDOW CONTENT FLEX COLUMN : 
+
+.window-content-flex-column{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+// WINDOW CONTENT CENTER : 
+
+.window-content-flex-center{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+// WINDOW CONTENT SCROLL :
+
+.window-content-scroll{
+    overflow: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 8px;
+        left: -5px;
+    }
+    &::-webkit-scrollbar-thumb { 
+        background: $tab-color;  
+        width: 5px;
+        border: 3px solid $tertiary-color;
+        border-left: none;
+        &:active{
+            background: $icon-color;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
 }

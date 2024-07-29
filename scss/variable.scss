@@ -17,6 +17,13 @@ $debug-font: "Courier New", Courier, monospace;
 $text-1x: 11px;
 $icon-size: 12px;
 $ui-z-deep: 1000;
+$top-highlight-height: 1px;
+
+// SPECIAL COLORS : 
+
+$red-color: #A71919;
+$green-color: #19A727;
+$gray-color: #D9D9D9;
 
 // DEBUG : 
 
@@ -55,4 +62,10 @@ $inside-tab-gap: 3px;
             font-size: $icon-size;
             color: $icon-color;
         }
+}
+
+// NON-RENDERABLE : 
+
+.non-renderable{
+    display: none;
 }

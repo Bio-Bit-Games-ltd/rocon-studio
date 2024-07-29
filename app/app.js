@@ -22,6 +22,11 @@ import { animation } from "../modules/animation/animation.js";
 import { tabHighlight } from "../modules/tab-highlight/tab-highlight.js";
 import { inspector } from "../modules/inspector/inspector.js";
 import { shild } from "../modules/shild/shild.js";
+import { presetHighlight } from "../modules/preset-highlight/preset-highlight.js";
+
+// WINDOWS : 
+
+import { windowCreate } from "../window/window-create/window-create.js";
 
 // UI IMPORTS : 
 
@@ -41,8 +46,10 @@ function appLoad(){
     animation();
     tabHighlight();
     inspector();
+    presetHighlight();
+    windowCreate();
 
-    shild({visible : true, opaque : true});
+    // shild({visible : true, opaque : true});
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());

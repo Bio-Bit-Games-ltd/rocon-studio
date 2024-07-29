@@ -1,0 +1,103 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+// WINDOW CREATE : 
+
+#window-create-content{
+
+}
+
+// ROCON CREATE BUTTON : 
+
+#rocon-create-button{
+    position: relative;    
+    width: 100%;
+    min-height: 30px;
+    background: $primary-color;
+    border: 3px solid $tertiary-color;   
+    outline: none;
+    font-family: $app-font;
+    font-size: $text-1x;
+    font-weight: initial;
+    border-top: none;
+    color: $font-color;
+    margin: 0px;
+    padding: 0px;
+    @include click();
+}
+
+// WINDOW CREATE CONTENT RIGHT : 
+
+.window-create-content-right{
+    position: relative;
+    width: 470px;
+    height: 100%;
+    box-sizing: border-box; 
+    gap: $inside-tab-gap;
+}
+
+// WINDOW CREATE CONTENT LEFT : 
+
+.window-create-content-left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 3px solid $tertiary-color;
+    flex-wrap: wrap;
+}
+
+// PRESET CONTAINER : 
+
+.preset-container{
+    position: relative;
+    width: 100px;
+    height: 130px;
+    min-width: 100px;
+    min-height: 130px;
+    background: $tab-color;
+    border-top: $top-highlight-height solid $tertiary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .preset-name{
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        box-sizing: border-box;
+        background: $gray-color;
+        font-family: $app-font;
+        font-weight: initial;
+        font-size: $text-1x;
+        color: $tab-color;
+        text-align: center;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    .preset-icon{
+        position: absolute;
+        font-size: 55px;
+        color: $icon-color;
+        top: 23px;
+    }
+    @include click();
+}

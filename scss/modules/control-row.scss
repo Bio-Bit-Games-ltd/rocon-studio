@@ -1,0 +1,313 @@
+
+
+
+
+
+
+
+
+
+
+// CONTROL ROW : 
+
+// control-row CONTAINER : 
+
+$control-row-container-gap: $inside-tab-gap;
+
+.control-row-container{
+    position: relative;
+    border: $control-row-container-gap solid $tertiary-color; 
+    border-top: none;
+    border-bottom: none;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background: $tab-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    &:nth-of-type(1){
+        border-top: $control-row-container-gap solid $tertiary-color;
+    }
+    &:last-of-type{
+        border-bottom: $control-row-container-gap solid $tertiary-color;
+    }
+}
+
+// control-row CONTAINER ROW :
+
+$control-row-container-row-height: 30px;
+$control-row-container-row-padding: 5px;
+
+.control-row-container-row{
+    position: relative;
+    width: 100%;
+    height: $control-row-container-row-height;
+    min-height: $control-row-container-row-height;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: $control-row-container-row-padding solid $tab-color;
+    border-top: none;
+} 
+
+// control-row CONTAINER LABEL : 
+
+.control-row-contaier-label{
+    position: relative;
+    width: 100%; 
+    height: $control-row-container-row-height;
+    min-height: $control-row-container-row-height;
+    box-sizing: border-box;
+    border-left: calc($control-row-container-row-padding + 3px) solid $tab-color;
+    font-family: $app-font;
+    font-weight: initial;
+    font-size: $text-1x;
+    color: $font-color;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+// control-row CONTAINER LABEL CONTAINER :
+
+.control-row-container-label-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// control-row CONTAINER CONTROL CONTAINER : 
+
+$control-row-container-inside-gap: 5px;
+
+.inpector-container-control-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: $control-row-container-inside-gap;
+}
+
+// control-row CONTAINER LABEL : 
+
+.control-row-container-label{
+    position: absolute;
+    left: 3px;
+    font-family: $app-font;
+    font-weight: initial;
+    font-size: $text-1x;
+    color: $font-color;
+    text-align: left;
+}
+
+// control-row CONTAINER INPUT CONTAINER : 
+
+.control-row-container-input-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    input{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: $tertiary-color;
+        border: 1px solid $tertiary-color;
+        outline: none;
+        padding: 3px;
+        font-family: $app-font;
+        color: $font-color;
+        font-weight: initial;
+        font-size: $text-1x;
+        padding-right: 20px;
+        &:focus{
+            border-color: $primary-color;
+        }
+    }
+    .input-incrementor{
+        position: absolute;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        right: 3px;
+        z-index: 1;
+        cursor: w-resize;
+        i{
+            position: relative;
+            font-size: $icon-size;
+            color: $icon-color;
+        }
+        &:active{
+            i{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+// control-row CONTAINER DROPDOWN CONTAINER : 
+
+.control-row-container-dropdown-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .control-row-dropdown{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: $tertiary-color;
+        border: 1px solid $tertiary-color;
+        outline: none;
+        padding: 3px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        cursor: pointer;
+        .control-row-dropdown-selected-label{
+            position: absolute;
+            left: 3px;
+            font-family: $app-font;
+            color: $font-color;
+            font-weight: initial;
+            font-size: $text-1x;
+        }
+        &:focus{
+            border-color: $primary-color;
+        }
+    }
+    .dropdown-arrow{   
+        position: absolute;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        right: 3px;
+        z-index: 1;
+        i{
+            position: relative;
+            font-size: $icon-size;
+            color: $icon-color;
+        }
+        &:active{
+            i{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+// control-row CONTAINER RANGE CONTAINER : 
+
+.control-row-container-range-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 10;
+    background: $tertiary-color;
+    .control-row-range{
+        position: relative;
+        width: 100%;
+        height: 2px;
+        box-sizing: border-box;
+        background: $tab-color;
+        outline: none;
+        -webkit-appearance:none; 
+        margin-left: 7px;
+        margin-right: 5px;
+        border-radius: 50px;
+        &::-webkit-slider-thumb {
+            -webkit-appearance:none; 
+            background: $icon-color;
+            width: 17px;
+            height: 4px;
+            border: 1px solid $icon-color;
+            cursor:pointer;
+            &:active{
+                border-color: $primary-color;
+                background: $primary-color;
+            }
+        }
+    }
+    .control-row-range-value-label{
+        position: relative;
+        font-family: $app-font;
+        color: $font-color;
+        font-weight: initial;
+        font-size: $text-1x;
+        margin-left: 5px;
+    }
+}
+
+
+// control-row CONTAINER INPUT TEXT CONTAINER : 
+
+.control-row-container-text-input-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    input{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: $tertiary-color;
+        border: 1px solid $tertiary-color;
+        outline: none;
+        padding: 3px;
+        font-family: $app-font;
+        color: $font-color;
+        font-weight: initial;
+        font-size: $text-1x;
+        padding-right: 20px;
+        &:focus{
+            border-color: $primary-color;
+        }
+    }
+    .text-input-icon{
+        position: absolute;
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        right: 4px;
+        z-index: 1;
+        i{
+            position: relative;
+            font-size: $icon-size;
+            color: $icon-color;
+        }
+    }
+}

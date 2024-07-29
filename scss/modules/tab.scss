@@ -73,7 +73,7 @@ $tab-row-heihgt: 30px;
     border: none;
     outline: none;
     cursor: pointer;
-    border-top: 3px solid $icon-color;
+    border-top: $top-highlight-height solid $icon-color;
     &:nth-of-type(1){
         border-top-color: $primary-color;
         background: $tertiary-color;
@@ -96,7 +96,7 @@ $tab-row-heihgt: 30px;
     border: none;
     outline: none;
     cursor: pointer;
-    border-top: 3px solid $icon-color;
+    border-top: $top-highlight-height solid $icon-color;
     display: flex;
     justify-content: center;
     align-items: center;
