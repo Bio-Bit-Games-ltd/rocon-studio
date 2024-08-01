@@ -184,7 +184,7 @@ $tracker-in-border: 2px;
     height: 100%;
     box-sizing: border-box;
     background: $primary-color;
-    border: 1px solid $secondary-color;
+    border: 1px solid $tab-color;
     display: grid;
     grid-template-columns: 7px 1fr 7px;
     .tracker-handle{
@@ -311,6 +311,13 @@ $tracker-in-border: 2px;
     align-items: center;
     cursor: w-resize;
     border-top: 2px solid $tertiary-color;
+    .needle-bottom{
+        position: absolute;
+        width: 4px;
+        height: 2px;
+        background: $gray-color;
+        bottom: 0px;
+    }
     &::before{
         position: absolute;
         width: 2px;
@@ -336,6 +343,7 @@ $tracker-in-border: 2px;
     display: none;
     left: 10px;
     z-index: 50;
+    border-top: 2px solid $tertiary-color;
 }
 
 // TIMELINE CREATE TRACKER : 

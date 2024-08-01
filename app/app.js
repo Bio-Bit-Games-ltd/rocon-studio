@@ -23,6 +23,7 @@ import { tabHighlight } from "../modules/tab-highlight/tab-highlight.js";
 import { inspector } from "../modules/inspector/inspector.js";
 import { shild } from "../modules/shild/shild.js";
 import { presetHighlight } from "../modules/preset-highlight/preset-highlight.js";
+import { windowMenu } from "../modules/menu-window/window-menu.js";
 
 // WINDOWS : 
 
@@ -39,7 +40,6 @@ const terminalInput = getUi("terminal-input");
 // APP LOAD : 
 
 function appLoad(){   
-    console("Application Started...", "success"); 
     splitter();
     viewportSelection();
     viewportGrid(20,20)
@@ -47,14 +47,113 @@ function appLoad(){
     tabHighlight();
     inspector();
     presetHighlight();
-    windowCreate();
-
+    console("Application Started...", "success"); 
     // shild({visible : true, opaque : true});
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());
 
-// TAB MANAGE : 
+// WINDOW MENU : 
+
+// FILE : 
+
+const fileMenu = getUi("menu-file")
+
+function handleMenuNew(){
+    const fileMenus = [
+        {
+            name: "New",
+            divisor: false,
+            id: "new-menu"
+        },
+        {
+            name: "Open",
+            divisor: true,
+            id: "HGT"
+        },
+        {
+            name: "Save",
+            divisor: false,
+            id: "HGT"
+        },
+        {
+            name: "Save as..",
+            divisor: true,
+            id: "HGT"
+        },
+        {
+            name: "File Option",
+            divisor: false,
+            id: "HGT"
+        },
+        {
+            name: "File Option",
+            divisor: false,
+            id: "HGT"
+        }
+    ];
+
+    windowMenu(fileMenu, fileMenus);
+
+    const menuNew = getUi("new-menu").addEventListener("click",function(){
+        const openWindowCreate = windowCreate();
+        openWindowCreate.createWindow();
+    });
+
+}
+
+fileMenu.addEventListener("click",handleMenuNew)
+
+// EDIT : 
+
+const editMenu = getUi("menu-edit")
+
+function handleMenuEdit(){
+    const editMenus = [
+        {
+            name: "Desfazer",
+            divisor: false,
+            id: "new-menu"
+        },
+        {
+            name: "Refazer",
+            divisor: true,
+            id: "HGT"
+        },
+        {
+            name: "Selecionar",
+            divisor: false,
+            id: "HGT"
+        },
+        {
+            name: "Save as..",
+            divisor: true,
+            id: "HGT"
+        },
+        {
+            name: "edit Option",
+            divisor: false,
+            id: "HGT"
+        },
+        {
+            name: "edit Option",
+            divisor: false,
+            id: "HGT"
+        }
+    ];
+
+    windowMenu(editMenu, editMenus);
+
+    // const menuEdit = getUi("new-menu").addEventListener("click",function(){
+    //     const openWindowCreate = windowCreate();
+    //     openWindowCreate.createWindow();
+    // });
+
+}
+
+editMenu.addEventListener("click",handleMenuEdit)
+
+// TAB : 
 
 consoleTabButton.addEventListener("click",function(){
     tab("console");

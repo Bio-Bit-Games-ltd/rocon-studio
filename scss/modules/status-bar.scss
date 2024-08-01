@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+// STATUS BAR : 
+
+#status-bar{
+    position: relative;
+    background: $tab-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+// STATUS BAR LEFT : 
+
+.status-bar-left{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    left: 0px;
+}
+
+// STATUS BAR RIGHT : 
+
+.status-bar-right{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    align-self: flex-end;
+    right: 0px;
+}
+
+// STATUS CONTAINER : 
+
+.status-container{
+    position: relative;
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+// STATUS BAR ICON : 
+
+.status-bar-icon{
+    position: relative; 
+    font-size: $icon-size; 
+    color: $icon-color;
+}
+
+// STATUS BAR VALUE : 
+
+.status-bar-value{
+    position: relative;
+    font-family: $app-font;
+    font-weight: initial;
+    font-size: $text-1x;
+    color: $font-color;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 2px;
+}

@@ -24,6 +24,8 @@
 @import './modules/ui-shild.scss';
 @import './modules/window.scss';
 @import './modules/control-row.scss';
+@import './modules/window-menu.scss';
+@import './modules/status-bar.scss';
 
 // WINDOW :
 
@@ -107,15 +109,6 @@ body{
 }
 
 // STATUS BAR : 
-
-#status-bar{
-    position: relative;
-    background: $tab-color;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-}
 
 // ENGINE VIEW :
 
