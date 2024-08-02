@@ -26,8 +26,8 @@ export function windowCreate(){
         shild: true,
         windowCloseVisible : false,
         resize : "vertical",
-        center : true,
-    }
+        center : true, 
+    } 
 
     const windowCreateInstance = new Window(windowCreateContent,windowCreateSettings)
 

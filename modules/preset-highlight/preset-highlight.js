@@ -8,18 +8,16 @@ export function presetHighlight() {
     function presetHighlightManage(presets) {
         if (presets.length > 0) {
             const firstPreset = presets[0];
-            firstPreset.style.borderColor = primaryColor;
             const firstPresetName = firstPreset.querySelector('.preset-name');
             if (firstPresetName) {
                 firstPresetName.style.background = primaryColor;
                 firstPresetName.style.color = fontColor;
             }
-        }
+        } 
 
         presets.forEach(preset => {
             preset.addEventListener('click', () => {
                 presets.forEach(btn => {
-                    btn.style.borderColor = ""; 
                     const presetName = btn.querySelector('.preset-name');
                     if (presetName) {
                         presetName.style.background = ""; 
@@ -27,7 +25,6 @@ export function presetHighlight() {
                     }
                 });
 
-                preset.style.borderColor = primaryColor;
                 const presetName = preset.querySelector('.preset-name');
                 if (presetName) {
                     presetName.style.background = primaryColor; 

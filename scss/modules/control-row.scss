@@ -160,7 +160,7 @@ $control-row-container-inside-gap: 5px;
 
 // CONTROL ROW BUTTON : 
 
-.control-row-button{
+.control-row-icon-button{
     position: relative;
     height: 100%;
     aspect-ratio: 1/1;
@@ -176,6 +176,21 @@ $control-row-container-inside-gap: 5px;
         font-size: $icon-size;
         color: $icon-color;
     }
+    @include click();
+}
+
+.control-row-text-button{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: $tertiary-color;
+    border: none;
+    outline: none;
+    font-family: $app-font;
+    font-size: $text-1x;
+    font-weight: initial;
+    color: $font-color;
     @include click();
 }
 
