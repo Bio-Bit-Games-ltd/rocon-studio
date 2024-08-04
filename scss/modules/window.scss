@@ -106,30 +106,6 @@
     align-items: center;
 }
 
-// WINDOW CONTENT SCROLL :
-
-.window-content-scroll{
-    overflow: hidden;
-    overflow-y: auto;
-    &::-webkit-scrollbar {
-        background: none; 
-        width: 8px;
-        left: -5px;
-    }
-    &::-webkit-scrollbar-thumb { 
-        background: $tab-color;  
-        width: 5px;
-        border: 3px solid $tertiary-color;
-        border-left: none;
-        &:active{
-            background: $icon-color;
-        }
-    }
-    &::-webkit-scrollbar-track {
-        background: none;
-    }
-}
-
 // WINDOW RESIZER : 
 
 $window-resize-scale: 2px;
@@ -177,4 +153,3 @@ $window-resize-scale: 2px;
     display: none;
     cursor: n-resize;
 }
-

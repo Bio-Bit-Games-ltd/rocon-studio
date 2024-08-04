@@ -53,6 +53,17 @@ function appLoad(){
 
 document.addEventListener("DOMContentLoaded",appLoad());
 
+// TERMINAL : 
+
+terminalInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        const { result } = terminal(terminalInput.value.trim());
+        terminalInput.value = '';
+        console(result);  // Exibe o objeto no console para depuração
+    }
+});
+
+
 // WINDOW MENU : 
 
 // FILE : 
@@ -176,15 +187,6 @@ const uiRangeProgress = new RangeProgress(inputRange);
 
 // const listPath = applicationPath("C:/Users/Rhyan Eduardo/Documents/GitHub/rocon-studio/game")
 // console(listPath,"log");
-
-// TERMINAL : 
-
-terminalInput.addEventListener("keydown", function(e) {
-    if (e.key === "Enter") {
-        terminal(terminalInput.value);
-        terminalInput.value = '';
-    }
-});
 
 
 

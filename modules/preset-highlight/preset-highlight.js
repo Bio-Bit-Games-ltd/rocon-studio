@@ -9,6 +9,7 @@ export function presetHighlight() {
         if (presets.length > 0) {
             const firstPreset = presets[0];
             const firstPresetName = firstPreset.querySelector('.preset-name');
+
             if (firstPresetName) {
                 firstPresetName.style.background = primaryColor;
                 firstPresetName.style.color = fontColor;

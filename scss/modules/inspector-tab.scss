@@ -25,24 +25,6 @@
     overflow-y: auto;
     overflow-x: hidden;
     z-index: 2;
-    &::-webkit-scrollbar {
-        background: none; 
-        width: 8px;
-        left: -5px;
-    }
-    &::-webkit-scrollbar-thumb {
-        background: $tab-color; 
-        width: 5px;
-        border-top: $inside-tab-gap solid $tertiary-color;
-        border-bottom: $inside-tab-gap solid $tertiary-color;
-        border-right: $inside-tab-gap solid $tertiary-color;
-        &:active{
-            background: $icon-color;
-        }
-    }
-    &::-webkit-scrollbar-track {
-        background: none;
-    }
 }
 
 

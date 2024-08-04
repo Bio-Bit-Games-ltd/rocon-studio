@@ -22,7 +22,6 @@
     align-items: center;
     flex-direction: column;
     background: $tab-color;
-    border: $inside-tab-gap solid $tertiary-color;
     overflow: hidden;
     overflow-y: auto;
     overflow-x: hidden;
@@ -45,7 +44,12 @@
     &::-webkit-scrollbar-track {
         background: none;
     }
+   
 }
+
+// div{
+//     border: $debug-border !important;
+// }
 
 // LOG ROW :
 
@@ -56,6 +60,48 @@
     font-size: 12px;
     font-weight: inherit;
     color: $font-color;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    user-select: text !important;
+    cursor: text;
+    z-index: 2;
+    &:nth-of-type(1){
+        padding-top: 3px;
+        z-index: 1;
+    }
+}
+
+// LOG SUCESS ROW :
+
+.terminal-sucess-row{
+    position: relative;
+    width: 100%;
+    font-family: $debug-font;
+    font-size: 12px;
+    font-weight: inherit;
+    color: $primary-color;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    user-select: text !important;
+    cursor: text;
+    z-index: 2;
+    &:nth-of-type(1){
+        padding-top: 3px;
+        z-index: 1;
+    }
+}
+
+// LOG ERROR ROW :
+
+.terminal-error-row{
+    position: relative;
+    width: 100%;
+    font-family: $debug-font;
+    font-size: 12px;
+    font-weight: inherit;
+    color: $red-color;
     text-align: left;
     padding-left: 5px;
     box-sizing: border-box;

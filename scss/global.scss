@@ -26,6 +26,7 @@
 @import './modules/control-row.scss';
 @import './modules/window-menu.scss';
 @import './modules/status-bar.scss';
+@import './modules/scroll.scss';
 
 // WINDOW :
 
@@ -146,7 +147,6 @@ body{
     flex-direction: column;
     border-top: $ui-container-gap solid $quaternary-color;
     border-bottom: $ui-container-gap solid $quaternary-color;
-
 }
 
 // UI RIGHT CONTAINER : 

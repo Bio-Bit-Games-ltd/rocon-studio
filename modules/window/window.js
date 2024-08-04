@@ -101,6 +101,18 @@ export class Window {
             }
         });
 
+        if (this.shild) {
+            document.addEventListener("click", (event) => {
+                if (!this.window.contains(event.target)) {
+                    this.windowTitleBar.style.borderColor = "#D9D9D9";
+        
+                    setTimeout(() => {
+                        this.windowTitleBar.style.borderColor = "";
+                    }, 100);
+                }
+            });
+        }
+
         if (this.center) {
             const mainViewRect = mainView.getBoundingClientRect();
             const windowRect = this.window.getBoundingClientRect();

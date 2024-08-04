@@ -16,9 +16,9 @@ $control-row-container-gap: $inside-tab-gap;
 
 .control-row-container{
     position: relative;
-    border: $control-row-container-gap solid $tertiary-color; 
-    border-top: none;
-    border-bottom: none;
+    // border: $control-row-container-gap solid $tertiary-color; 
+    // border-top: none;
+    // border-bottom: none;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -27,12 +27,6 @@ $control-row-container-gap: $inside-tab-gap;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    &:nth-of-type(1){
-        border-top: $control-row-container-gap solid $tertiary-color;
-    }
-    &:last-of-type{
-        border-bottom: $control-row-container-gap solid $tertiary-color;
-    }
 }
 
 // control-row CONTAINER ROW :
