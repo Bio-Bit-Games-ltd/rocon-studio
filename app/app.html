@@ -18,6 +18,9 @@
 
     <!-- NON-RENDERABLE AREA -->
 
+    <div style="display: none;" id="divtest">HELLO WORLD!</div>
+    <div style="display: none;" id="divtest2">HELLO WORLD 2!</div>
+
     <!-- WINDOW MENU -->
 
     <div id="window-menu-container">
@@ -467,7 +470,7 @@
 
             <div id="ui-left-container" class="tab-container">
                 <div class="ui-tab-container">
-                    <div class="ui-tab-row">
+                    <div id="ui-left-container-tab-row" class="ui-tab-row">
                         <button class="tab-button">Explorer</button>
                         <button class="tab-button">Asset</button>
                     </div>
@@ -537,10 +540,9 @@
 
                 <div id="ui-top-container" class="tab-container">
                     <div class="ui-tab-container">
-                        <div class="ui-tab-row">
+                        <div id="ui-top-container-tab-row" class="ui-tab-row">
                             <button class="tab-button tab-b-button">2D Stage</button>
                             <button class="tab-button tab-b-button">Editor</button>
-                            <button class="tab-button tab-b-button">Game</button>
                             <button class="tab-button tab-b-button">UI Design</button>
                             <button class="add-tab-button"><i class="ri-add-fill"></i></button>
                         </div>
@@ -589,7 +591,7 @@
                 
                 <div id="ui-bottom-container" class="tab-container">
                     <div class="ui-tab-container">
-                        <div class="ui-tab-row">
+                        <div id="ui-bottom-container-tab-row" class="ui-tab-row">
                             <button id="timeline-tab-button" class="tab-button tab-c-button">Timeline</button>
                             <button id="console-tab-button" class="tab-button tab-c-button">Console</button>
                             <button id="terminal-tab-button" class="tab-button tab-c-button">Terminal</button>
@@ -732,7 +734,7 @@
             
             <div id="ui-right-container" class="tab-container">
                 <div class="ui-tab-container">
-                    <div class="ui-tab-row">
+                    <div id="ui-right-container-tab-row" class="ui-tab-row">
                         <button class="tab-button">Inspector</button>
                         <button class="tab-button">Debug</button>
                     </div>

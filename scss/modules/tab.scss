@@ -82,6 +82,11 @@ $tab-row-heihgt: 30px;
     }
 }
 
+.active-tab{
+    border-top-color: $primary-color;
+    background: $tertiary-color;
+}
+
 // ADD TAB BUTTON : 
 
 .add-tab-button{

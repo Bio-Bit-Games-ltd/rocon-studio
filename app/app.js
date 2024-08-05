@@ -24,6 +24,33 @@ import { inspector } from "../modules/inspector/inspector.js";
 import { shild } from "../modules/shild/shild.js";
 import { presetHighlight } from "../modules/preset-highlight/preset-highlight.js";
 import { windowMenu } from "../modules/menu-window/window-menu.js";
+import { tabManage } from "../modules/tab-manage/tab-manage.js";
+
+const divTest = getUi("divtest");
+divTest.style.color = "red";
+divTest.style.zIndex = "40000";
+
+const divTest2 = getUi("divtest2");
+divTest2.style.color = "red";
+divTest2.style.zIndex = "40000";
+
+const uitabs = [
+    {
+        name: "Addon Master",
+        content: divTest,
+        ID: "TABTL",
+        location: "top"
+    },
+    {
+        name: "Addon Master",
+        content: divTest2,
+        ID: "TABTgL",
+        location: "bottom"
+    }
+];
+
+// Chama a função tabManage com a lista de abas
+tabManage(uitabs);
 
 // WINDOWS : 
 

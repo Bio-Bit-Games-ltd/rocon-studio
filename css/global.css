@@ -95,6 +95,11 @@
   background: #161616;
 }
 
+.active-tab {
+  border-top-color: #19A727;
+  background: #161616;
+}
+
 .add-tab-button {
   position: relative;
   font-family: arial;
