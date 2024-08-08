@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CUSTOM MOUSE :
+
+#custom-mouse{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    .custom-mouse-cursor{
+        position: absolute;
+        font-size: $icon-size;
+        color: $icon-color;
+    }
+}

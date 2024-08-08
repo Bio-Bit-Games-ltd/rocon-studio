@@ -1,3 +1,14 @@
+
+
+
+
+
+
+
+
+
+
+
 import { getUi } from "../get-ui/get-ui.js";
 import { console } from "../console/console.js";
 
@@ -6,10 +17,12 @@ const uiTopContainerTabRow = getUi("ui-top-container-tab-row");
 const uiBottomContainerTabRow = getUi("ui-bottom-container-tab-row");
 const uiRightContainerTabRow = getUi("ui-right-container-tab-row");
 
-const uiLeftContainer = getUi("ui-left-container");
-const uiTopContainer = getUi("ui-top-container");
-const uiBottomContainer = getUi("ui-bottom-container");
-const uiRightContainer = getUi("ui-right-container");
+const uiLeftContainer = getUi("tab-left");
+const uiTopContainer = getUi("tab-top");
+const uiBottomContainer = getUi("tab-bottom");
+const uiRightContainer = getUi("tab-right");
+
+const addTabButton = getUi("add-tab-button");
 
 const tabContentsByLocation = {
     left: [],
@@ -63,7 +76,7 @@ export function tabManage(tabList) {
                 tabContentsByLocation.left.push(tabContent);
                 break;
             case "top":
-                uiTopContainerTabRow.appendChild(tabButton);
+                uiTopContainerTabRow.insertBefore(tabButton,addTabButton);
                 uiTopContainer.appendChild(tabContent);
                 tabButtonsByLocation.top.push(tabButton);
                 tabContentsByLocation.top.push(tabContent);

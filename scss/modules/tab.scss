@@ -76,14 +76,15 @@ $tab-row-heihgt: 30px;
     outline: none;
     cursor: pointer;
     border-top: $top-highlight-height solid $icon-color;
-    &:nth-of-type(1){
-        border-top-color: $primary-color;
-        background: $tertiary-color;
-    }
+    // &:nth-of-type(1){
+    //     border-top-color: $primary-color;
+    //     background: $tertiary-color;
+    // } 
+
 }
 
 .active-tab{
-    border-top-color: $primary-color;
+    border-top-color: $primary-color; 
     background: $tertiary-color;
 }
 
@@ -97,23 +98,24 @@ $tab-row-heihgt: 30px;
     color: $font-color;
     text-align: center;
     height: 100%;
-    aspect-ratio: 1/1;
-    background: $tab-color; 
+    width: 20px;
+    background: none; 
     box-sizing: border-box;
     border: none;
     outline: none;
-    cursor: pointer;
-    border-top: $top-highlight-height solid $icon-color;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     i{
         position: absolute;
         font-size: 15px;
         color: $icon-color;
     }
     &:active{
-        border-color: $primary-color;
+        i{
+            color: $primary-color;
+        }
     }
 }
 

@@ -117,11 +117,11 @@ export class Window {
             const mainViewRect = mainView.getBoundingClientRect();
             const windowRect = this.window.getBoundingClientRect();
             
-            const x = (mainViewRect.width / windowRect.width);
-            const y = (mainViewRect.height / windowRect.height) ;
+            const x = (mainViewRect.width / 2) - this.window.offsetWidth / 2;
+            // const y = (mainViewRect.height / windowRect.height) ;
 
-            this.window.style.left = `${x }px`; 
-            this.window.style.top = `${y }px`; 
+            this.window.style.left = `${x}px`; 
+            // this.window.style.top = `${y }px`; 
         }
  
         if (this.center != false && (this.x != undefined || this.y != undefined)) {

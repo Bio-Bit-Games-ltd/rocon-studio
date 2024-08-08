@@ -90,10 +90,6 @@
   cursor: pointer;
   border-top: 1px solid #D9D9D9;
 }
-.tab-button:nth-of-type(1) {
-  border-top-color: #19A727;
-  background: #161616;
-}
 
 .active-tab {
   border-top-color: #19A727;
@@ -108,24 +104,23 @@
   color: #D9D9D9;
   text-align: center;
   height: 100%;
-  aspect-ratio: 1/1;
-  background: #111111;
+  width: 20px;
+  background: none;
   box-sizing: border-box;
   border: none;
   outline: none;
-  cursor: pointer;
-  border-top: 1px solid #D9D9D9;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .add-tab-button i {
   position: absolute;
   font-size: 15px;
   color: #D9D9D9;
 }
-.add-tab-button:active {
-  border-color: #19A727;
+.add-tab-button:active i {
+  color: #19A727;
 }
 
 #ui-dropdown {
@@ -819,12 +814,25 @@
   background: none;
 }
 
+#custom-mouse {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+#custom-mouse .custom-mouse-cursor {
+  position: absolute;
+  font-size: 12px;
+  color: #D9D9D9;
+}
+
 #rocon-create-button {
   position: relative;
   width: 100%;
   min-height: 30px;
   background: #19A727;
-  border: 3px solid #161616;
+  border: none;
   outline: none;
   font-family: arial;
   font-size: 11px;
@@ -832,6 +840,7 @@
   border-top: none;
   color: #D9D9D9;
   margin: 0px;
+  margin-bottom: 3px;
   padding: 0px;
 }
 #rocon-create-button:hover {
@@ -848,6 +857,7 @@
   height: 100%;
   box-sizing: border-box;
   gap: 3px;
+  border-top: 3px solid #161616;
 }
 
 .window-create-content-left {
@@ -967,7 +977,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
@@ -983,7 +993,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
@@ -1066,7 +1076,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -1179,7 +1189,7 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background: #111111;
@@ -1348,7 +1358,7 @@
   width: 200px;
   height: 100%;
   box-sizing: border-box;
-  background: #19A727;
+  background: #4a0472;
   border: 1px solid #111111;
   display: grid;
   grid-template-columns: 6px 1fr 6px;
@@ -1365,7 +1375,7 @@
   position: absolute;
   width: 2px;
   height: 20px;
-  background: #19A727;
+  background: #4a0472;
 }
 .tracker .tracker-handle:active .tracker-handle-indicator {
   background: #111111;
@@ -1381,11 +1391,14 @@
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  border: 3px solid #19A727;
+  border: 3px solid #4a0472;
   background: rgba(0, 0, 0, 0.1647058824);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("C:/Users/Rhyan Eduardo/Documents/GitHub/rocon-studio/assets/img/tracker-diagonal-lines.png");
+  background-size: 50px;
+  background-repeat: repeat;
 }
 .tracker .tracker-valuer-container .tracker-name {
   position: absolute;
@@ -1461,7 +1474,7 @@
 
 #needle {
   position: absolute;
-  width: 4px;
+  width: 3px;
   height: 100%;
   bottom: 0px;
   box-sizing: border-box;
@@ -1475,18 +1488,21 @@
 }
 #needle .needle-bottom {
   position: absolute;
-  width: 4px;
+  width: 3px;
   height: 2px;
   background: #D9D9D9;
   bottom: 0px;
 }
-#needle::before {
+#needle .needle-tracker {
   position: absolute;
-  width: 2px;
-  height: 500%;
+  width: 1px;
+  height: 700%;
   top: 27px;
   background: #D9D9D9;
   z-index: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   content: "";
 }
 #needle:active {

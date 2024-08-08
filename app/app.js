@@ -13,44 +13,18 @@
 import { getUi } from "../modules/get-ui/get-ui.js";
 import { terminal } from "../modules/terminal/terminal.js";
 import { splitter } from "../modules/splitter/splitter.js";
-import { tab } from "../modules/tab/tab.js";
 import { console } from "../modules/console/console.js";
 import { RangeProgress } from "../modules/range-progress/range-progress.js";
 import { viewportGrid } from "../modules/viewport-grid/viewport-grid.js";
 import { viewportSelection } from "../modules/viewport-selection/viewport-selection.js";
 import { animation } from "../modules/animation/animation.js";
-import { tabHighlight } from "../modules/tab-highlight/tab-highlight.js";
 import { inspector } from "../modules/inspector/inspector.js";
 import { shild } from "../modules/shild/shild.js";
 import { presetHighlight } from "../modules/preset-highlight/preset-highlight.js";
 import { windowMenu } from "../modules/menu-window/window-menu.js";
-import { tabManage } from "../modules/tab-manage/tab-manage.js";
-
-const divTest = getUi("divtest");
-divTest.style.color = "red";
-divTest.style.zIndex = "40000";
-
-const divTest2 = getUi("divtest2");
-divTest2.style.color = "red";
-divTest2.style.zIndex = "40000";
-
-const uitabs = [
-    {
-        name: "Addon Master",
-        content: divTest,
-        ID: "TABTL",
-        location: "top"
-    },
-    {
-        name: "Addon Master",
-        content: divTest2,
-        ID: "TABTgL",
-        location: "bottom"
-    }
-];
-
-// Chama a função tabManage com a lista de abas
-tabManage(uitabs);
+import { viewport } from "../modules/viewport/viewport.js"
+// import { tabManage } from "../modules/tab-manage/tab-manage.js";
+import { tabLoad } from "../modules/tab-load/tab-load.js";
 
 // WINDOWS : 
 
@@ -68,14 +42,17 @@ const terminalInput = getUi("terminal-input");
 
 function appLoad(){   
     splitter();
-    viewportSelection();
-    viewportGrid(20,20)
+    // viewportSelection();
+    // viewportGrid(20,20)
     animation();
-    tabHighlight();
     inspector();
-    presetHighlight();
+    presetHighlight(); 
+    tabLoad();
     console("Application Started...", "success"); 
-    // shild({visible : true, opaque : true});
+    viewport({
+        gridWidth : 50,
+        gridHeight : 50
+    }) 
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());

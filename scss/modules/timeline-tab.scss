@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background: $tab-color;
@@ -179,13 +179,15 @@ $tracker-in-border: 2px;
 
 // TRACKER : 
 
+$tracker-color: #4a0472;
+
 .tracker{
     position: absolute;
     left: 10%;
     width: 200px;
     height: 100%;
     box-sizing: border-box;
-    background: $primary-color;
+    background: $tracker-color;
     border: 1px solid $tab-color;
     display: grid;
     grid-template-columns: 6px 1fr 6px; 
@@ -200,7 +202,7 @@ $tracker-in-border: 2px;
             position: absolute;
             width: 2px;
             height: 20px;
-            background: $primary-color;
+            background: $tracker-color;
         }
         &:active{
             .tracker-handle-indicator{
@@ -219,11 +221,14 @@ $tracker-in-border: 2px;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        border: 3px solid $primary-color;
+        border: 3px solid $tracker-color;
         background: #0000002a;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: url('C:/Users/Rhyan Eduardo/Documents/GitHub/rocon-studio/assets/img/tracker-diagonal-lines.png') ;
+        background-size: 50px;
+        background-repeat: repeat;
         .tracker-name{
             position: absolute;
             font-family: arial;
@@ -305,7 +310,7 @@ $tracker-in-border: 2px;
 
 #needle{
     position: absolute;
-    width: 4px;
+    width: 3px;
     height: 100%;
     bottom: 0px;
     box-sizing: border-box;
@@ -318,18 +323,21 @@ $tracker-in-border: 2px;
     cursor: w-resize;
     .needle-bottom{
         position: absolute;
-        width: 4px;
+        width: 3px;
         height: 2px;
         background: $gray-color;
         bottom: 0px;
     }
-    &::before{
+    .needle-tracker{
         position: absolute;
-        width: 2px;
-        height: 500%;
+        width: 1px;
+        height: 700%;
         top: calc($tab-header-height - 2px);
         background: $secondary-color; 
         z-index: 800;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         content: '';
     }
     &:active{ 

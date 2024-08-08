@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/global.css"/>
     <link rel="stylesheet" href="../node_modules/remixicon/fonts/remixicon.css">
-    <script src="../libs/pixi-js/pixi.min.js"></script>
     <title></title>
  
     <!-- META END -->
@@ -16,10 +15,17 @@
 </head>
 <body>
 
+    <div id="divtest" style="z-index: 40000;">AAAA</div>
+
     <!-- NON-RENDERABLE AREA -->
 
-    <div style="display: none;" id="divtest">HELLO WORLD!</div>
-    <div style="display: none;" id="divtest2">HELLO WORLD 2!</div>
+    <!-- CUSTOM MOUSE -->
+
+    <div id="custom-mouse">
+        <i class="custom-mouse-cursor"></i>
+    </div>
+
+    <!-- CUSTOM MOUSE END -->
 
     <!-- WINDOW MENU -->
 
@@ -471,10 +477,10 @@
             <div id="ui-left-container" class="tab-container">
                 <div class="ui-tab-container">
                     <div id="ui-left-container-tab-row" class="ui-tab-row">
-                        <button class="tab-button">Explorer</button>
-                        <button class="tab-button">Asset</button>
+                        <!-- <button class="tab-button">Explorer</button> -->
+                        <!-- <button class="tab-button">Asset</button> -->
                     </div>
-                    <div class="ui-tab">
+                    <div id="tab-left" class="ui-tab">
                         <div id="explorer-tab" class="fullsize-tab-container">
 
                             <div class="explorer-folder-row">
@@ -541,16 +547,16 @@
                 <div id="ui-top-container" class="tab-container">
                     <div class="ui-tab-container">
                         <div id="ui-top-container-tab-row" class="ui-tab-row">
-                            <button class="tab-button tab-b-button">2D Stage</button>
-                            <button class="tab-button tab-b-button">Editor</button>
-                            <button class="tab-button tab-b-button">UI Design</button>
-                            <button class="add-tab-button"><i class="ri-add-fill"></i></button>
+                            <!-- <button class="tab-button tab-b-button">2D Stage</button> -->
+                            <!-- <button class="tab-button tab-b-button">Editor</button> -->
+                            <!-- <button class="tab-button tab-b-button">UI Design</button> -->
+                            <button id="add-tab-button" class="add-tab-button"><i class="ri-add-fill"></i></button>
                         </div>
-                        <div class="ui-tab">   
+                        <div id="tab-top" class="ui-tab">   
 
                             <!-- VIEWPORT TAB -->
 
-                            <div id="viewport-tab">
+                            <div id="viewport-tab" class="non-renderable">
                                 <div class="viewport-menu-container">
                                     <div class="viewport-menu-right-container">
                                         <button class="viewport-menu-button"><i class="ri-clockwise-fill"></i></button>
@@ -592,22 +598,22 @@
                 <div id="ui-bottom-container" class="tab-container">
                     <div class="ui-tab-container">
                         <div id="ui-bottom-container-tab-row" class="ui-tab-row">
-                            <button id="timeline-tab-button" class="tab-button tab-c-button">Timeline</button>
-                            <button id="console-tab-button" class="tab-button tab-c-button">Console</button>
-                            <button id="terminal-tab-button" class="tab-button tab-c-button">Terminal</button>
+                            <!-- <button id="timeline-tab-button" class="tab-button tab-c-button">Timeline</button> -->
+                            <!-- <button id="console-tab-button" class="tab-button tab-c-button">Console</button> -->
+                            <!-- <button id="terminal-tab-button" class="tab-button tab-c-button">Terminal</button> -->
                         </div>
-                        <div class="ui-tab">
+                        <div id="tab-bottom" class="ui-tab">
 
                             <!-- CONSOLE TAB -->
 
-                            <div id="console-tab" class="fullsize-tab-container">
+                            <div id="console-tab" class="fullsize-tab-container non-renderable">
                                 <span class="log-row">copyright &copy; 2024 biobit interactive co.</span>
                                 <span class="log-row">all rights reseverds.</span>
                             </div>
 
                             <!-- TERMINAL TAB -->
 
-                            <div id="terminal-tab" class="fullsize-tab-container">
+                            <div id="terminal-tab" class="fullsize-tab-container non-renderable">
                                 <span class="terminal-log-row">copyright &copy; 2024 biobit interactive co.</span>
                                 <span class="terminal-log-row">all rights reseverds.</span>
                                 <input id="terminal-input" spellcheck="false" type="text" placeholder="Rocon CLI">
@@ -615,7 +621,7 @@
 
                             <!-- TIMELINE TAB -->
 
-                            <div id="timeline-tab" class="fullsize-tab-container">
+                            <div id="timeline-tab" class="fullsize-tab-container non-renderable">
                                 <div class="timeline-left-container">
                                     <div class="timeline-header-container timeline-header-control-container">
                                         <button id="backward-animation"><i class="ri-rewind-fill"></i> </button>
@@ -624,7 +630,7 @@
                                         <button id="forward-animation"><i class="ri-speed-fill"></i> </button>
                                         <button><i class="ri-settings-4-fill"></i> </button>
                                     </div>
-                                    <div class="timeline-track-container timeline-track-tracker">
+                                    <div id="sequence-control-container" class="timeline-track-container timeline-track-tracker">
                                        
                                         <div class="timeline-track-row">
                                             <div class="timeline-tracker-control">
@@ -667,10 +673,11 @@
                                         <span class="timeline-ruler-value">100.00</span>
                                         <div id="needle">
                                             <div class="needle-bottom"></div>
+                                            <div class="needle-tracker"></div>
                                         </div>
                                         <div id="pre-needle"></div>
                                     </div>
-                                    <div class="timeline-track-container timeline-track-tracker">
+                                    <div id="sequence-tracker-container" class="timeline-track-container timeline-track-tracker">
                                         
                                         <div class="timeline-track-row timeline-tracker-row">
                                             <div class="tracker">
@@ -735,11 +742,11 @@
             <div id="ui-right-container" class="tab-container">
                 <div class="ui-tab-container">
                     <div id="ui-right-container-tab-row" class="ui-tab-row">
-                        <button class="tab-button">Inspector</button>
-                        <button class="tab-button">Debug</button>
+                        <!-- <button class="tab-button">Inspector</button> -->
+                        <!-- <button class="tab-button">Debug</button> -->
                     </div>
-                    <div class="ui-tab">
-                        <div id="inspector-tab" class="fullsize-tab-container v-scroll">
+                    <div id="tab-right" class="ui-tab">
+                        <div id="inspector-tab" class="fullsize-tab-container v-scroll non-renderable">
                             <div class="control-row-container">
                                 <span class="control-row-contaier-label">Transform</span>
                                 <div class="control-row-container-row">
@@ -1065,16 +1072,8 @@
 
     <!-- MAIN CONTAINER END -->  
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/8.2.6/pixi.min.js"></script>
     <script defer type="module" src="./app.js"></script>  
-    <script src="../modules/console/console.js"></script>
-
-    <script>
-        window.onerror = function(message, source, lineno, colno, error) {
-            // Captura o erro e exibe em um span
-            console(`${message}`);
-            return true; // Impede que o navegador exiba a mensagem de erro padrão
-        };
-    </script>
-    
+        
 </body>
 </html>

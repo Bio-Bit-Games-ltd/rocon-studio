@@ -55,7 +55,7 @@ export function viewportSelection() {
         let width = Math.abs(endX - startX);
         let height = Math.abs(endY - startY);
 
-        selectionBox.setLineDash([5, 5]); // Define o estilo dashed
+        selectionBox.setLineDash([3, 3]); // Define o estilo dashed
         selectionBox.strokeStyle = 'white';
         selectionBox.lineWidth = 1;
         selectionBox.strokeRect(minX, minY, width, height);
