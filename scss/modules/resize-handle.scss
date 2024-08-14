@@ -1,0 +1,182 @@
+
+
+
+
+
+
+
+
+
+
+
+// RESIZE HANDLE : 
+
+// HANDLE RESIZE RECT : 
+
+$handle-rect-size: 100px;
+
+#resize-handle-rect{
+    position: absolute;
+    width: $handle-rect-size;
+    height: $handle-rect-size; 
+    border: 1px dashed $gray-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    top: 10px;
+}
+
+// HANDLE : 
+
+$handle-size: 5px;
+$handle-outside: -4px;
+
+#handle-top{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    top: $handle-outside;
+    cursor: s-resize;
+}
+
+#handle-top-left{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    top: $handle-outside;
+    left: $handle-outside;
+    cursor: nw-resize;
+}
+
+#handle-top-right{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    top: $handle-outside;
+    right: $handle-outside;
+    cursor: sw-resize;
+}
+
+#handle-left-center{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    left: $handle-outside;
+    cursor: w-resize;
+}
+
+#handle-bottom-left{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    left: $handle-outside;
+    bottom: $handle-outside;
+    cursor: sw-resize;
+}
+
+#handle-bottom{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    bottom: $handle-outside;
+    cursor: s-resize;
+}
+
+#handle-bottom-right{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    bottom: $handle-outside;
+    right: $handle-outside;
+    cursor: nw-resize;
+}
+
+#handle-right-center{
+    position: absolute;
+    width: $handle-size;
+    height: $handle-size;
+    border: 1px solid $gray-color;
+    background: $primary-color;
+    right: $handle-outside;
+    cursor: w-resize;
+}
+
+// RESIZE HANDLE GLOBAL : 
+
+.resize-handle{
+    &:active{
+        background: $tab-color !important;
+    }
+}
+
+// ANCHOR POINT : 
+
+#anchor-point{
+    position: absolute;
+    font-size: $icon-size;
+    color: $icon-color;
+    &:active{
+        color: $primary-color;
+    }
+}
+
+// ROTATION HANDLE : 
+
+.rotation-handle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    i{
+        position: absolute;
+        color: $icon-color;
+        font-size: $icon-size  + 3px;
+        display: none;
+        text-rendering: geometricPrecision;
+    }
+    &:active{
+        cursor: none;
+        i{
+            color: $primary-color;
+        }
+    }
+    &:hover{
+        i{
+            display: flex;
+        }
+    }
+
+}
+
+.rotation-handle-right{
+    right: -23px;
+}
+
+.rotation-handle-left{
+    left: -23px;
+}
+
+.rotation-handle-top{
+    top: -23px;
+}
+
+.rotation-handle-bottom{
+    bottom: -23px;
+}

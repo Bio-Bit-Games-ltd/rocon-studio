@@ -28,6 +28,8 @@
 @import './modules/status-bar.scss';
 @import './modules/scroll.scss';
 @import './modules/custom-mouse.scss';
+@import './modules/viewport-ui.scss';
+@import './modules/resize-handle.scss';
 
 // WINDOW :
 
@@ -62,7 +64,7 @@ body{
         }
     }
     i{
-        text-rendering: optimizeLegibility;
+        text-rendering: geometricPrecision;
     }
 
 }

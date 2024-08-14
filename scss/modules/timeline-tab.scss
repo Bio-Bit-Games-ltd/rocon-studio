@@ -27,7 +27,7 @@
 
 .timeline-left-container{
     position: relative;
-    width: 160px;
+    width: 180px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -99,12 +99,13 @@ $track-height: 30px;
     position: relative;
     width: 100%;
     height: $track-height;
+    min-height: $track-height;
+    background: $tab-color;
     box-sizing: border-box;
-    background: $tertiary-color;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 5px;
+    //padding-right: 5px;
 }
 
 // TIMELINE TRACKER CONTROL : 
@@ -129,8 +130,8 @@ $tracker-in-border: 2px;
         width: 1px;
         height: 10px;
         background: $tertiary-color;
-        right: -3px;
-        z-index: 100;
+        right: 0px;
+        z-index: 200; 
         content: '';
     }
     button{
@@ -172,7 +173,7 @@ $tracker-in-border: 2px;
         border-top: 2px solid $tertiary-color;
         border-bottom: 2px solid $tertiary-color;
         background: $tab-color;
-        z-index: 0;
+        z-index: 2;
         content: '';
     }
 }
@@ -383,8 +384,8 @@ $tracker-color: #4a0472;
         width: 1px;
         height: 10px;
         background: $tertiary-color;
-        right: -3px;
-        z-index: 100;
+        right: 0px;
+        z-index: 200; 
         content: '';
     }
 }

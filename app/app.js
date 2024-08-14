@@ -25,6 +25,8 @@ import { windowMenu } from "../modules/menu-window/window-menu.js";
 import { viewport } from "../modules/viewport/viewport.js"
 // import { tabManage } from "../modules/tab-manage/tab-manage.js";
 import { tabLoad } from "../modules/tab-load/tab-load.js";
+import { sequence } from "../modules/sequence/sequence.js";
+import { resizeHandle } from "../modules/animation/resize-handle/resize-handle.js"; 
 
 // WINDOWS : 
 
@@ -53,6 +55,8 @@ function appLoad(){
         gridWidth : 50,
         gridHeight : 50
     }) 
+    sequence();
+    resizeHandle();
 }
 
 document.addEventListener("DOMContentLoaded",appLoad());

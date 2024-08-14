@@ -1,8 +1,20 @@
+
+
+
+
+
+
+
+
+import { getUi } from "../get-ui/get-ui.js";
+
 export function viewport(viewportSettings) {
     let viewportGridWidth = viewportSettings.gridWidth;
     let viewportGridHeight = viewportSettings.gridHeight;;
 
-    const canvas = document.getElementById('viewport');
+    const canvas = getUi('viewport-grid');
+    const twoDStageViewport = getUi("twod-stage-viewport")
+
     const ctx = canvas.getContext('2d');
     let isDragging = false;
     let startX, startY;
@@ -75,7 +87,7 @@ export function viewport(viewportSettings) {
             startX = event.clientX - rect.left;
             startY = event.clientY - rect.top;
             drawGrid(viewportGridWidth, viewportGridHeight);
-            canvas.style.cursor = "move";
+            twoDStageViewport.style.cursor = "move";
         } else if (isSelecting) {
             endX = event.clientX - rect.left;
             endY = event.clientY - rect.top;
@@ -87,18 +99,18 @@ export function viewport(viewportSettings) {
     function onMouseUp(event) {
         if (isDragging) {
             isDragging = false;
-            canvas.style.cursor = "";
+            twoDStageViewport.style.cursor = "";
         } else if (isSelecting) {
             isSelecting = false;
             drawGrid(viewportGridWidth, viewportGridHeight); // Redraw grid
         }
     }
 
-    canvas.addEventListener('contextmenu', event => event.preventDefault());
-    canvas.addEventListener('mousedown', onMouseDown);
-    canvas.addEventListener('mousemove', onMouseMove);
-    canvas.addEventListener('mouseup', onMouseUp);
-    canvas.addEventListener('mouseleave', onMouseUp);
+    twoDStageViewport.addEventListener('contextmenu', event => event.preventDefault());
+    twoDStageViewport.addEventListener('mousedown', onMouseDown);
+    twoDStageViewport.addEventListener('mousemove', onMouseMove);
+    twoDStageViewport.addEventListener('mouseup', onMouseUp);
+    twoDStageViewport.addEventListener('mouseleave', onMouseUp);
 
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();

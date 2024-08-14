@@ -574,8 +574,25 @@
                                         <button class="viewport-menu-button"><i class="ri-stop-fill"></i></button>
                                     </div>
                                 </div>
-                                <div class="viewport-container">
-                                    <canvas id="viewport"></canvas>
+                                <div id="twod-stage-viewport" class="viewport-container">
+                                    <div id="viewport-ui">
+                                        <div id="resize-handle-rect">
+                                            <i id="anchor-point" class="ri-focus-line"></i>
+                                            <div id="handle-top" class="resize-handle"></div>
+                                            <div id="handle-top-left" class="resize-handle"></div>
+                                            <div id="handle-top-right" class="resize-handle"></div>
+                                            <div id="handle-left-center" class="resize-handle"></div>
+                                            <div id="handle-bottom-left" class="resize-handle"></div>
+                                            <div id="handle-bottom" class="resize-handle"></div>
+                                            <div id="handle-bottom-right" class="resize-handle"></div>
+                                            <div id="handle-right-center" class="resize-handle"></div>
+                                            <div id="rotation-handle-right" class="rotation-handle rotation-handle-right"><i class="ri-refresh-fill"></i></div>
+                                            <div id="rotation-handle-left" class="rotation-handle rotation-handle-left"><i class="ri-refresh-fill"></i></div>
+                                            <div id="rotation-handle-top" class="rotation-handle rotation-handle-top"><i class="ri-refresh-fill"></i></div>
+                                            <div id="rotation-handle-bottom" class="rotation-handle rotation-handle-bottom"><i class="ri-refresh-fill"></i></div>
+                                        </div>
+                                    </div>
+                                    <canvas id="viewport-grid"></canvas>
                                 </div>  
                             </div>
 
@@ -630,9 +647,9 @@
                                         <button id="forward-animation"><i class="ri-speed-fill"></i> </button>
                                         <button><i class="ri-settings-4-fill"></i> </button>
                                     </div>
-                                    <div id="sequence-control-container" class="timeline-track-container timeline-track-tracker">
+                                    <div id="sequence-control-container" class="timeline-track-container timeline-track-tracker scroll-non-renderable">
                                        
-                                        <div class="timeline-track-row">
+                                        <!-- TAMPLATE <div class="timeline-track-row">
                                             <div class="timeline-tracker-control">
                                                 <span class="tracker-control-name">Transform</span>
                                                 <button><i class="ri-lock-fill"></i></button>
@@ -640,19 +657,9 @@
                                                 <button><i class="ri-eye-fill"></i></button>
                                                 <button><i class="ri-add-large-fill"></i></button>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="timeline-track-row">
-                                            <div class="timeline-tracker-control">
-                                                <span class="tracker-control-name">Transform</span>
-                                                <button><i class="ri-lock-fill"></i></button>
-                                                <button><i class="ri-delete-bin-fill"></i></i></button>
-                                                <button><i class="ri-eye-fill"></i></button>
-                                                <button><i class="ri-add-large-fill"></i></button>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-track-row">
+                                        <div id="sequence-static-track-row" class="timeline-track-row">
                                             <button class="timeline-create-tracker">Create<i class="ri-add-fill"></i></button>
                                         </div>
 
@@ -677,9 +684,9 @@
                                         </div>
                                         <div id="pre-needle"></div>
                                     </div>
-                                    <div id="sequence-tracker-container" class="timeline-track-container timeline-track-tracker">
+                                    <div id="sequence-tracker-container" class="timeline-track-container timeline-track-tracker v-scroll-no-border">
                                         
-                                        <div class="timeline-track-row timeline-tracker-row">
+                                        <!-- TAMPLATE <div class="timeline-track-row timeline-tracker-row">
                                             <div class="tracker">
                                                 <div class="tracker-handle left-tracker-handle">
                                                     <div class="tracker-handle-indicator"></div>
@@ -695,28 +702,9 @@
                                                     <div class="tracker-handle-indicator"></div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
 
-                                        <div class="timeline-track-row timeline-tracker-row">
-                                            <div class="tracker">
-                                                <div class="tracker-handle left-tracker-handle">
-                                                    <div class="tracker-handle-indicator"></div>
-                                                </div>
-                                                <div class="tracker-body">
-                                                    <div class="tracker-valuer-container">
-                                                        <input type="number" value="10" spellcheck="false" placeholder="00" class="tracker-value tracker-start-value"/>
-                                                        <input type="text" value="Transform" spellcheck="false" placeholder="no name" class="tracker-name"/>
-                                                        <input type="number" value="10" spellcheck="false" placeholder="00" class="tracker-value tracker-end-value"/>
-                                                    </div>
-                                                </div>
-                                                <div class="tracker-handle right-tracker-handle">
-                                                    <div class="tracker-handle-indicator"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-track-row timeline-tracker-row">
-                                        </div>
+                                        <div id="sequence-static-tracker-row" class="timeline-track-row timeline-tracker-row"></div>
            
                                     </div>
                                 </div>

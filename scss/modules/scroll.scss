@@ -78,3 +78,92 @@
         background: none;
     }
 }
+
+.scroll-no-border{
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 11px;
+        height: 11px;
+        left: -5px;
+    } 
+    &::-webkit-scrollbar-thumb { 
+        background: $tab-color;  
+        border: 3px solid $tertiary-color;
+        &:active{
+            background: $icon-color;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: $tertiary-color;
+    }
+}
+
+.v-scroll-no-border{
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 11px;
+        left: -5px;
+    }
+    &::-webkit-scrollbar-thumb { 
+        background: $tab-color;  
+        width: 5px;
+        border: $inside-tab-gap solid $tertiary-color;
+        &:active{
+            background: $icon-color;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: $tertiary-color;
+    }
+}
+
+.h-scroll-no-border{
+    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 8px;
+        left: -5px;
+    }
+    &::-webkit-scrollbar-thumb { 
+        background: $tab-color;  
+        width: 5px;
+        border: 3px solid $tertiary-color;
+        border-left: none;
+        &:active{
+            background: $tertiary-color
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: none;
+    }
+}
+
+.scroll-non-renderable{
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        background: none; 
+        width: 11px;
+        height: 11px;
+        left: -5px;
+    } 
+    &::-webkit-scrollbar-thumb { 
+        background: $tab-color;  
+        border: 3px solid $tertiary-color;
+        &:active{
+            background: $icon-color;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: $tertiary-color;
+    }
+}
